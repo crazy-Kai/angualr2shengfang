@@ -1,0 +1,57 @@
+<div class="flex column fillspace-sm">
+    <div class="opt-order-audit-header">
+        <button type="button" class="btn btn-agree" [hidden]="!hasChecked()" (click)="batchAgree()">批量通过</button>
+        <button type="button" class="btn btn-refuse" [hidden]="!hasChecked()" (click)="batchRefuse()">批量打回</button>
+        <button type="button" class="btn btn-close" title="确定结束审方？" (handler)="endAudit($event);" [disabled]="!receiveRecipe" [class.btn-disabled]="!receiveRecipe" confirm-direc>{{receiveRecipe ? '结束审方' : '已停止接受任务'}}</button>
+    </div>
+    <div class="flex1 flex column">
+        <table class="table opt-order-audit-th">
+            <tbody>
+                <tr style="height: 45px;">
+                    <th width="4%" style="min-width: 40px;">
+                        <input type="checkbox" [checked]="isAllChecked()" (click)="isAllCheck($event)">
+                    </th>
+                    <th width="14%">处方时间</th>
+                    <th width="8%">科室</th>
+                    <th width="7%">医生</th>
+                    <th width="10%">处方号</th>
+                    <th width="40%">警示信息</th>
+                    <th>操作</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex1" style="overflow-y: scroll;margin-right: -7px;">
+            <table class="table" style="margin: 0;">
+                <tbody>
+                    <tr *ngFor="let trow of optRecipeList;let i = index;" (dblclick)="goRecipeDetail(trow)" [class.even-tr]="i%2 === 1">
+                        <td width="4%" align="center" style="min-width: 40px;">
+                            <input type="checkbox" [checked]="isChecked(trow) >= 0" (click)="putInCheckList(trow)">
+                        </td>
+                        <td width="14%">
+                            {{trow.optRecipe.recipeTime | date:"yyyy-MM-dd HH:mm:ss"}}
+                            <span *ngIf="trow.optRecipe.urgentFlag == 1" class="urgent-flag">紧急</span>
+                        </td>
+                        <td width="8%">{{trow.optRecipe.deptName}}</td>
+                        <td width="7%">{{trow.optRecipe.recipeDocName}}</td>
+                        <td width="10%">{{trow.optRecipe.recipeNo}}</td>
+                        <td width="40%" class="warning-msg text-left">
+                            <div *ngFor="let infos of trow.infos" [style.color]="infos.severity >= 5 ? '#f00' : (infos.severity == 4 ? '#000' : '#999')" style="margin: 5px 0;">
+                                <div class="analysis-esult">{{infos.analysisResultType}}</div>：
+                                <div class="analysis-esult-message">{{infos.message}} <span>{{infos.severity}}</span></div>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <button class="order-audit-operation" (click)="goRecipeDetail(trow,trow.optRecipe.id);$event.stopPropagation()">查看</button>|
+                            <button class="order-audit-operation" (click)="refuseOptOrderAudit(trow);$event.stopPropagation()" [disabled]="trow.infos.length == 0" [class.btn-disabled]="trow.infos.length == 0">打回</button>|
+                            <button class="order-audit-operation" (click)="agreeOptOrderAudit(trow);$event.stopPropagation()">通过</button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="!(optRecipeList && optRecipeList.length)" class="text-center">
+                        <td colspan="100">当前暂无待审处方</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <audit-tips [options]="auditOptions"></audit-tips>
+</div>

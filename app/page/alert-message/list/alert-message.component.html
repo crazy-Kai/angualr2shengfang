@@ -1,0 +1,182 @@
+<div class="flex column fillspace-sm">
+    <div class="search-form">
+        <div class="flex search-form-con">
+            <div class="flex1 form-inline">
+                <div class="col-6 form-group">
+                    <label>日期：</label>
+                    <time-interval [startTime]="searchParams.startDate" [endTime]="searchParams.endDate" (timeSetted)="updateSearchTime($event)"></time-interval>
+                </div>
+                <div class="col-3 form-group">
+                    <label>审核对象：</label>
+                    <select [(ngModel)]="searchParams.auditObject" (change)="auditObjChange()">
+						<option value="1" selected>门诊处方</option>
+						<option value="2">门诊患者</option>
+						<option value="3">住院医嘱</option>
+					</select>
+                </div>
+                <!-- <div class="col-3 form-inline mt-2 float-left" *ngIf="pathNum == 0 || (pathNum != 0 && searchParams.auditObject != 3)"> -->
+                <div class="col-3 form-group" *ngIf="searchParams.auditObject != 3">
+                    <label>来源：</label>
+                    <select [(ngModel)]="searchParams.recipeSource">
+						<option value="0" selected></option>
+						<option value="1">门诊</option>
+						<option value="2">急诊</option>
+					</select>
+                </div>
+                <div class="col-3 form-group">
+                    <label>药品分类：</label>
+                    <div class="search-form-drug" (click)="chooseDrug()">
+                        <span *ngFor="let drug of drugCategoryResultList" class="add-program-header">
+							{{drug.name}}
+                        	<span class="add-program-checked" (click)="drugCategoryResultDelete($event,drug.id)">×</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-3 form-group">
+                    <label>药品名称：</label>
+                    <!-- <auto-complete [option]="drugOption" (select)="drugNameSelect($event)"></auto-complete> -->
+                    <input type="text" class="form-control form-control-sm" method="getProductList" placeholder="请输入药品名称" (onChoosed)="drugNameSelect($event)"
+                        [(ngModel)]="searchParams.productName" [autocomplete] highlight="true">
+                </div>
+                <div class="col-3 form-group">
+                    <label>科室：</label>
+                    <div class="search-form-dept" (click)="deptclick($event)" #deptComp>
+                        <span *ngFor="let _zone of deptList" style="line-height:30px;">
+                            <span *ngIf="!_zone.checked">
+	                            <span class="audit-plan-dept-name" *ngFor="let dept of trans2Arr(_zone&&_zone.idNamePairs || {})">
+	                                {{dept.name}}
+	                                <span class="audit-plan-X" (click)="fnZoneDeptDelete('dept',dept,$event)">X</span>
+                        </span>
+                        </span>
+                        <span class="audit-plan-dept-name" *ngIf="_zone.checked">
+	                                {{_zone.zoneName}}
+	                                <span class="audit-plan-X" (click)="fnZoneDeptDelete('zone',_zone,$event)">X</span>
+                        </span>
+                        </span>
+                        <zone-dept-wrap-component [options]="deptOptions" [relydom]="deptComp" (output)="fnDeptSelect($event)" [deptList]="deptList"></zone-dept-wrap-component>
+                    </div>
+                </div>
+                <div class="col-3 form-group" *ngIf="searchParams.auditObject == 3">
+                    <label>病区：</label>
+                    <div class="search-form-dept" style="position:relative;" (click)="iptwardPopup()">
+                        <span *ngFor="let _zone of iptWardList" style="line-height:30px;">
+                            <span class="audit-plan-dept-name" *ngFor="let iptWard of trans2Arr(_zone&&_zone.idNamePairs || {})">
+                                {{iptWard.name}}
+                                <span class="audit-plan-X" (click)="fnZoneIptWardDelete('iptWard',iptWard,$event)">X</span>
+                        </span>
+                        <!-- <span class="audit-plan-dept-name">
+                                {{_zone.zoneName}}
+                                <span class="audit-plan-X" (click)="fnZoneIptWardDelete('zone',_zone,$event)">X</span>
+	                        </span> -->
+                        </span>
+                        <audit-plan-doctor [doctorStr]="iptWardStr" [searchType]="3" [justNeedDialog]="true" (doctorUpdate)="handleIptWardUpdate($event)"></audit-plan-doctor>
+                    </div>
+                </div>
+                <div class="col-3 form-group">
+                    <label>分析类型：</label>
+                    <select-comp [active]="searchParams.analysisType" [option]="analysisTypeOption" (select)="analysisTypeSelect($event)"></select-comp>
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>提示类型：</label>
+                    <select class="form-control form-control-sm" [(ngModel)]="searchParams.analysisResultType">
+						<option value=""></option>
+						<option *ngFor="let analysisResultType of analysisResultTypeList" value="{{analysisResultType.id}}">{{analysisResultType.name}}</option>
+					</select>
+                </div>
+                <div class="col-3 form-group" *ngIf="pathNum == 0 && fullMode && searchParams.auditObject != 3">
+                    <label>医生：</label>
+                    <input type="text" class="form-control form-control-sm" method="getDoctorList" placeholder="请输入医生名称" [(ngModel)]="docName"
+                        (onChoosed)="doctorSelect($event)" [autocomplete] highlight="true">
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>警示等级：</label>
+                    <select style="width: 65px;margin-right: 15px;" [(ngModel)]="searchParams.severitySymbol">
+						<option value=">" selected> > </option>
+						<option value=">="> >= </option>
+						<option value="<"> < </option>
+						<option value="<="> <= </option>
+						<option value="="> = </option>
+					</select>
+                    <select style="width: 65px;" [(ngModel)]="searchParams.severity">
+						<option value="0" selected>0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+					</select>
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>警示状态：</label>
+                    <select class="form-control form-control-sm" [(ngModel)]="searchParams.messageStatus">
+						<option value="0" selected></option>
+						<option value="1">未处理</option>
+						<option value="2">已确认</option>
+						<option value="3">已待查</option>
+					</select>
+                </div>
+                <div class="col-3 form-group" *ngIf="pathNum == 0 && fullMode">
+                    <label>申请状态：</label>
+                    <select class="form-control form-control-sm" [(ngModel)]="searchParams.userAppliedStatus">
+						<option value="0" selected></option>
+						<option value="1">申请确认</option>
+						<option value="2">申请待查</option>
+						<option value="3">未处理</option>
+					</select>
+                </div>
+            </div>
+            <div>
+                <button class="btn search-form-btn btn-sm" (click)="search()" role="button">搜索</button>
+            </div>
+        </div>
+        <div class="slide-bar">
+            <a (click)="fullMode = !fullMode">{{fullMode ? '收起' : '展开'}}筛选条件<img src="../../../images/arrows-down.svg" class="tips-arrow" [class.uparrow]="fullMode"/></a>
+        </div>
+    </div>
+    <div class="text-right">
+        <div class="export" (click)="export()">
+            <span class="icon-export" style="color: #515253;margin-right: 8px;"></span>导出
+        </div>
+        <div class="download" (click)="exportList()">
+            <span class="icon-download" style="color: #515253;margin-right: 8px;"></span>下载
+        </div>
+    </div>
+    <div class="flex1" style="position: relative">
+        <my-table [table]="AMListTable" [isFixedHeader]="true">
+            <template #tableTemplate let-tableinfo>
+                <tr *ngFor="let trow of tableinfo.dataList;let i = index;" (mouseover)="touchedTrow = trow" [class.even-tr]="i%2 == 1">
+                    <!-- <td width="15%" style="min-width: 1px">
+						<a (click)="window.open(helpUrl+'?webHisId='+trow.productId)">{{trow.infoName}}</a>
+					</td> -->
+                    <td width="15%" style="min-width: 1px">
+                        <a (click)="goAlertMsgDetail(trow)">{{trow.infoName}}</a>
+                    </td>
+                    <td width="10%" style="min-width: 1px">{{trow.analysisResultType}}</td>
+                    <td width="7%" style="min-width: 1px">{{trow.severity}}</td>
+                    <td>{{trow.message}}</td>
+                    <td width="10%" style="min-width: 1px">{{trow.messageStatusStr}}</td>
+                    <td width="10%" style="min-width: 1px">{{trow.userAppliedStatusStr}}</td>
+                    <td width="7%" style="min-width: 1px">{{trow.count}}</td>
+                    <td width="8%" style="min-width: 1px">
+                        <span (click)="goAlertMsgDetail(trow)" class="alert-message-check icon-check" #review (mouseover)="showTips($event, review)"
+                            (mouseout)="review.show = false">
+                            <mouse-tips [title]="'查看'" [isFixed]='true' [posInfo]='posInfo' *ngIf="trow == touchedTrow && review.show"></mouse-tips>
+                        </span>
+                    </td>
+                </tr>
+                <tr *ngIf="!(tableinfo.dataList&&tableinfo.dataList.length)">
+                    <td colspan="100" style="text-align:center;">没有查询到数据！</td>
+                </tr>
+            </template>
+        </my-table>
+    </div>
+</div>
+
+<drug-category-dialog #drugCategoryDialog [options]="drugCategoryDialogOptions" (onChooseDrugs)="chooseNewCategoryConfirm($event)"></drug-category-dialog>
+<iph-download *ngIf="downloadWin" (closeWin)="downloadWin = false"></iph-download>
+<prompt-component></prompt-component>
+<audit-tips [options]="auditOptions"></audit-tips>

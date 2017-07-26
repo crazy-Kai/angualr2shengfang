@@ -1,0 +1,659 @@
+body {
+    font-size: 13px;
+}
+
+.clear-both {
+    clear: both;
+}
+.recipe-info{
+    margin-bottom: 10px;
+}
+.pre-ckeck {
+    background: #fff;
+    height: 45px;
+    overflow: hidden;
+}
+
+.fillspace-15 {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.check-return {
+    float: left;
+    background: #fff;
+    margin:10px 0 0 15px;
+}
+
+.left-arrow {
+    width: 18px;
+    height: 18px;
+}
+
+.check-return span {
+    font-family: STHeitiSC-Medium;
+    font-size: 13px;
+    color: #515253;
+}
+
+.check-title {
+    display: block;
+    font-size: 16px;
+    line-height: 45px;
+    margin: 0 152px;
+}
+
+.check-header {
+    background: #fff;
+    border-top: 1px solid #eceeef;
+}
+
+.check-header-patient{
+    border-right: 1px solid #eceeef;
+}
+
+.check-header-patient table {
+    border: none;
+    margin: 0;
+}
+
+.check-header-patient td {
+    padding: 5px 7px;
+    height: 30px;
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+    border: none;
+    white-space: nowrap;
+}
+
+.check-header-patient span {
+    color: #000;
+}
+
+.checks {
+    padding: 5px;
+}
+
+.checks .check-list {
+    height: 80px;
+    padding: 0 5px;
+    line-height: 80px;
+    font-size: 12px;
+    vertical-align: initial;
+    cursor: pointer;
+    text-align: center;
+}
+.checks .check-list:hover{
+    background: #f8f8f8;
+}
+
+.checks .check-list>img {
+    width: 16px;
+    height: 17px;
+    color: #94A2AE;
+    margin-right: 5px;
+}
+
+.pre-ord-list {
+    padding: 0;
+    border: 1px solid #eceeef;
+    background: #fff;
+    overflow: auto;
+}
+
+.pre-ord {
+    margin: 10px;
+}
+.pre-ord th{
+    height: auto;
+}
+
+.pre-ord-num {
+    min-height: 20px;
+    padding: 0 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background: rgb(200, 200, 200);
+}
+
+.pre-old-num {
+    height: 24px;
+    line-height: 24px;
+}
+
+.pre-ord table {
+    margin: 0;
+}
+
+.pre-ord-table {
+    padding: 10px;
+    border: 1px solid #eceeef;
+    border-top: none;
+    font-size: 12px;
+}
+
+.pre-ord-table .table-header {
+    
+}
+
+.pre-ord-table .table-header,
+.pre-ord-table .table-header td {
+    border: none;
+    color: #999;
+}
+
+.pre-ord-table .table-header span {
+    color: #000;
+}
+
+.pre-ord-action {
+    background: #00a82e;
+    color: #fff;
+}
+
+.pre-ord-check {
+    color: red;
+    cursor: pointer;
+}
+
+.pre-suggest-list {
+    padding-right: 0;
+}
+
+.pre-suggest-question {
+    margin-left: 60%;
+}
+
+.pre-suggest {
+    height: 100%;
+    background: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.pre-suggest-num {
+    height: 35px;
+    padding: 5px 8px;
+    background: #fbfbfb;
+    color: #00a82e;
+    font-size: 14px;
+    line-height: 25px;
+    border-bottom: 1px solid #D9E4E7;
+}
+
+.pre-suggest-num .green-dot-icon {
+    padding: 4px;
+    margin-right: 5px;
+    border-radius: 4px;
+    background: #00a82e;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.blue-rect-icon {
+    padding: 7px 3px;
+    margin-right: 5px;
+    background: #4EB7E0;
+    font-size: 0;
+    vertical-align: 4px;
+}
+
+.pre-suggest-text {
+    padding: 5px 10px;
+}
+
+.audit-info-list {
+    margin-bottom: 10px;
+}
+
+.audit-info {
+    margin-left: 5px;
+    border-left: 1px solid #eceeef;
+}
+
+.audit-info:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.blue-circle {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #4EB7E0;
+    background: #fff;
+    border-radius: 50%;
+    margin: 8px 10px 0 -5px;
+}
+
+.pre-suggest-time {
+    padding: 5px 5px 5px 15px;
+    line-height: 20px;
+}
+
+.pre-suggest-info {
+    height: 30px;
+    margin-left: 15px;
+    padding: 5px;
+    background: #f1f0ee;
+}
+
+.pre-suggest-drug-list {
+    
+}
+
+.pre-suggest-drug {
+    border-bottom: 1px solid #eceeef;
+    margin-bottom: 10px;
+}
+
+.pre-suggest-drug:last-child {
+    border: none;
+    margin: 0;
+}
+
+.pre-suggest-drug .drug-name {
+    padding: 5px 10px;
+}
+
+.pre-suggest-drug .drug-warning-sug {
+    padding: 10px 10px 5px 10px;
+}
+
+.warning-msg {
+    margin-bottom: 5px;
+}
+
+.warning-msg input[type='checkbox'] {
+    vertical-align: -2px;
+}
+
+.warning-msg .warning-level {
+    margin-left: 5px;
+}
+
+.phar-suggestion {}
+
+.phar-suggestion span {
+    display: inline-block;
+    margin: 0 10px 5px 0;
+    padding: 5px;
+    background: #f2f2f2;
+    border-radius: 3px;
+}
+
+.doctor-opinion-first {
+    /*border-radius: 5px;
+    padding: 5px;
+    background: #FFCCCC;*/
+    margin-bottom: 1px;
+    border: 1px solid #f9f9f9;
+    background-color: #f9f9f9;
+    padding-left: 18px;
+}
+
+.doctor-opinion-second {
+    border-radius: 5px;
+    padding: 5px;
+    background: #BBFF66;
+}
+
+.pre-suggest-handler {
+    padding: 10px;
+    border-top: 1px solid #eceeef;
+    text-align: center;
+}
+
+.check-textarea {
+    width: 100%;
+    height: 65px;
+    color: rgb(153, 153, 153);
+}
+
+.check-text {
+    border-top: 1px solid rgba(121, 121, 121, 1);
+    padding: 5px 15px;
+}
+
+.check-text>span {
+    font-size: 12px;
+}
+
+.check-btn-fail {
+    float: left;
+    color: #535353;
+    margin: 5px 40px;
+    background: #fff;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px;
+}
+
+.check-btn-pass {
+    float: right;
+    color: #fff;
+    margin: 5px 40px;
+    background: #4EB7E0;
+    border-radius: 5px;
+}
+
+#openAllergy {
+    font-family: STHeitiSC-Medium;
+    font-size: 12px;
+    color: #4EB7E0;
+    line-height: 27px;
+}
+
+.popup-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 1100px;
+    background: #fff;
+}
+
+.popup-allergy {
+    width: 500px;
+}
+
+#popupAllergy>div {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+#popupAllergy>div>a {
+    text-align: right;
+    float: right;
+    margin-right: 20px;
+}
+
+.popup-allergy-content {
+    font-size: 13px !important;
+}
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 1001;
+}
+
+.check-list {
+    height: 60px;
+    padding: 0 5px;
+    line-height: 60px;
+    vertical-align: initial;
+    cursor: pointer;
+}
+
+.check-list>img {
+    width: 16px;
+    height: 17px;
+    color: #94A2AE;
+    margin-right: 10px;
+}
+
+.text-center {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.return-fonts {
+    margin-left: 5px;
+}
+
+.popup-box .popup-header {
+    height: 50px;
+    padding: 15px 20px;
+    margin: 0;
+    background: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.popup-header>a {
+    color: inherit;
+    text-decoration: none;
+    color: #535353;
+    text-align: left;
+    cursor: pointer;
+}
+
+.popup-header>span {
+    font-size: 16px !important;
+    text-align: center;
+    color: black;
+}
+
+.popup-close {
+    float: right;
+}
+
+.popup-allergy-content {
+    height: 100% !important;
+}
+
+.pre-suggest-drug .drug-warning-sug .warning-III {
+    color: #ff0000;
+}
+
+.pre-suggest-drug .drug-warning-sug .warning-II {
+    color: #ff7600;
+}
+
+.pre-suggest-drug .drug-warning-sug .warning-I {
+    color: #9b9b9b;
+}
+
+.patientAllergyFont {
+    font-size: 13px;
+    color: #999 !important;
+    border: none;
+}
+
+.popup-gz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 1001;
+}
+
+.table-bordered {
+    width: 96%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    margin-left: 2%;
+}
+
+.focus-title {
+    margin-top: 10px;
+    margin-left: 2px;
+}
+
+.popup-asso {
+    width: 900px;
+    height: 550px;
+    overflow: auto;
+}
+
+.popup-asso .popup-header {
+    height: 50px;
+    padding: 15px 20px;
+    margin: 0;
+    background: #fff;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #F5F7FA;
+}
+
+.asso-tips {
+    font-size: 18px;
+    text-align: center;
+}
+
+.asso-title {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 10px solid #4EB7E0;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.popup-operation-table {
+    margin: 10px;
+    background: #fff;
+}
+
+
+/*手术*/
+
+.popup-operation {
+    min-width: 660px;
+}
+
+.patient-info {
+    margin: 0 0 5px 10px;
+}
+
+.patient-info:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.patient-info li {
+    float: left;
+    margin-right: 20px;
+    color: #999;
+    line-height: 20px;
+}
+
+.patient-info li span {
+    margin-left: 5px;
+    color: #000;
+}
+
+
+/**实验室指标**/
+
+.asso-title {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 10px solid #4EB7E0;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.sheet-main-con {
+    margin-bottom: 0;
+}
+
+.sheet-main-con th {
+    border: 0;
+    border-bottom: 1px solid #eceeef;
+}
+
+.sheet-main-con td {
+    border: 0;
+}
+
+.sheet-main-con td.space-line,
+.sheet-main-con th.space-line {
+    /*border-right: 1px solid #ccc;*/
+}
+
+.sheet-main-con td,
+.sheet-main-con th {
+    /*padding: 5px;
+    text-align: left;*/
+    padding: .75rem;
+    border: 1px solid #eceeef;
+}
+
+table {
+    border: 1px solid #eceeef;
+}
+
+
+/*检查单*/
+
+.popup-checklist {
+    min-width: 780px;
+    width: 65%;
+}
+
+.sheet-main-header {
+    margin-bottom: 0;
+    border: 0;
+    background: #ebf5ff;
+}
+
+.sheet-main-header>tbody {
+    border-top: 1px solid #4EB7E0;
+    border-bottom: 1px solid #4EB7E0;
+}
+
+.sheet-main-header td,
+.sheet-main-header th {
+    min-width: 150px;
+    padding: 5px;
+    border: 0;
+    text-align: left;
+    color: #999;
+}
+
+.sheet-main-header td span {
+    margin-left: 5px;
+    color: #000;
+}
+
+.laboratory-findings {
+    border: 0;
+}
+
+.popup-checklist-table {
+    width: 97.5%;
+    margin: 0 auto;
+    margin-bottom: 10px !important;
+    background: #FFFFFF;
+    border: 1px solid #eceeef !important;
+}
+
+.popup-header-title {
+    float: left;
+    margin-left: 10px;
+}
+
+.asso-lab {
+    margin-bottom: 10px;
+}
+
+.sheet-result {
+    min-height: 150px;
+    padding: 10px;
+    text-align: left;
+    overflow: auto;
+}
+
+.popup-checklist-table-title {
+    text-align: center;
+    padding: 15px 10px;
+}

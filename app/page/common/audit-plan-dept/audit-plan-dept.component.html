@@ -1,0 +1,78 @@
+<div class="form-group form-inline" style="position: relative;">
+    <label class="f-i-label" [style.width]="lbWidth">科室：</label>
+    <div class="add-program-checked-select" [style.width]="IptWidth" (click)="isPopupShow=!isPopupShow">
+        <div *ngIf="inputType=='1'">
+            <span class="add-program-header" *ngFor="let result of zoneResultArr">
+                {{result}}
+                <span class="add-program-checked" (click)="zoneDelete($event, result)">×</span>
+            </span>
+        </div>
+        <div *ngIf="inputType!='1'">
+            <span class="add-program-header" *ngFor="let result of deptResultArr">
+                {{result}}
+                <span class="add-program-checked" (click)="deptDelete($event, result)">×</span>
+            </span>
+        </div>
+    </div>
+    <!--<div *ngIf="isPopupShow">-->
+    <div class="popup-add-choice popup-both row" [style.left]="winL" *ngIf="isPopupShow && inputType==3">
+        <div class="col-6 flex column">
+            <div class="input-group popup-add-choice-search">
+                <div class="input-group-addon icon-search"></div>
+                <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="搜索院区" #zoneSearchBox (keyup)="searchZone(zoneSearchBox.value)">
+            </div>
+            <ul class="flex1">
+                <li *ngFor="let zone of zoneList;let i = index;" [class.clear-both]="i==0" [class.popup-add-choice-bg]="(i+1)%2==1" class="text-left popup-add-choice-bd">
+                    <input type="checkbox" name="type" value="{{zone.name}}" [checked]="zone.name==checkedZone" (click)="zoneClick(zone)">
+                    {{zone.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-6 flex column">
+            <div class="input-group popup-add-choice-search">
+                <div class="input-group-addon icon-search"></div>
+                <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="搜索科室" #deptSearchBox (keyup)="searchDept(deptSearchBox.value)">
+            </div>
+            <div class="flex1" style="padding: 0 10px">
+                <input type="checkbox" name="type" value="全选" [checked]="isDeptAllCheck" (click)="deptClick()">全选
+                <div *ngFor="let dept of deptList;let i = index;" class="text-left popup-add-margin popup-add-choice-bd">
+                    <input type="checkbox" name="type" value="{{dept.name}}" [checked]="dept.checked" (click)="deptClick(dept)">
+                    {{dept.name}}
+                </div>
+            </div>
+        </div>
+        <div class="popup-add-choice-triangle"></div>
+    </div>
+    <div class="popup-add-choice popup-single" [style.left]="winL" *ngIf="isPopupShow && inputType==2">
+        <div class="flex column">
+            <div class="input-group popup-add-choice-search">
+                <div class="input-group-addon icon-search"></div>
+                <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="搜索科室" #deptSearchBox (keyup)="searchDept(deptSearchBox.value)">
+            </div>
+            <div class="flex1" style="padding: 0 10px">
+                <input type="checkbox" name="type" value="全选" [checked]="isDeptAllCheck" (click)="deptClick()">全选
+                <div *ngFor="let dept of deptList;let i = index;" class="text-left popup-add-margin popup-add-choice-bd">
+                    <input type="checkbox" name="type" value="{{dept.name}}" [checked]="dept.checked" (click)="deptClick(dept)">
+                    {{dept.name}}
+                </div>
+            </div>
+        </div>
+        <div class="popup-add-choice-triangle"></div>
+    </div>
+    <div class="popup-add-choice popup-single" [style.left]="winL" *ngIf="isPopupShow && inputType==1">
+         <div class="flex column">
+            <div class="input-group popup-add-choice-search">
+                <div class="input-group-addon icon-search"></div>
+                <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="搜索院区" #zoneSearchBox (keyup)="searchZone(zoneSearchBox.value)">
+            </div>
+            <ul class="flex1">
+                <li *ngFor="let zone of zoneList;let i = index;" [class.clear-both]="i==0" [class.popup-add-choice-bg]="(i+1)%2==1" class="text-left popup-add-choice-bd">
+                    <input type="checkbox" name="type" value="{{zone.name}}" [checked]="zone.name==checkedZone" (click)="zoneClick(zone)">
+                    {{zone.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="popup-add-choice-triangle"></div>
+    </div>
+    <!--</div>-->
+</div>

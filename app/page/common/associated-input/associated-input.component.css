@@ -1,0 +1,9 @@
+input {
+    display: inline-block;
+    width: 145px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid #DFDFDF;
+    border-radius: 0;
+    overflow: hidden;
+}

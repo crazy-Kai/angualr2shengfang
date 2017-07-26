@@ -1,0 +1,21 @@
+input{
+	/*width: 80%;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	height: 1.8125rem;*/
+}
+.acc-list{
+	position: absolute;
+    background: #fff;
+    z-index: 9;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow: auto;
+    border-color: #ddd #999 #999;
+    min-height: 150px;
+}
+.acc-list ul {width: 100%;padding: 0;margin: 0;background: #fff !important;}
+.acc-list li {margin: 2px 0px;cursor: pointer;padding: 4px 5px;display: block;font-size: 12px;line-height: 16px;overflow: hidden;transition: text-indent 0.5s;}
+.acc-list li strong {color : #00A65A;}
+.acc-list li:nth-child(even) {background-color: #f8f8f8;}
+.acc-list li:hover {background-color: #367fa9;color: white;text-indent: 4px;}

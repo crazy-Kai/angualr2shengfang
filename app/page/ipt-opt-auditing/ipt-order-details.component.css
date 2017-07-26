@@ -1,0 +1,978 @@
+body {
+    font-size: 13px;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.pre-ckeck {
+    overflow: hidden;
+}
+
+.fillspace-15 {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.order-info {
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.order-info header {
+    border-bottom: 1px solid #D9E4E7;
+}
+
+.check-return {
+    float: left;
+    background: #fff;
+    margin: 10px 0 0 15px;
+}
+
+.left-arrow {
+    width: 15px;
+    height: 15px;
+}
+
+.check-return span {
+    font-family: STHeitiSC-Medium;
+    font-size: 13px;
+    color: #515253;
+}
+
+.check-title {
+    display: block;
+    font-size: 16px;
+    line-height: 45px;
+    margin: 0 152px;
+}
+
+.check-header {
+    height: 60px;
+    margin-bottom: 10px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.ipt-patient-info-con {
+    width: 80%;
+    border-right: 1px solid #eee;
+    height: 160px;
+}
+
+.ipt-patient-info {
+    border: 0;
+    border: none;
+    margin-bottom: 0;
+}
+
+.ipt-patient-info td {
+    height: 30px;
+    padding: 5px 7px;
+    border: 0;
+    color: #999;
+    text-align: left;
+}
+
+.ipt-patient-info td span {
+    margin-left: 5px;
+    color: #000;
+}
+
+.pre-ord-check {
+    float: right;
+    cursor: pointer;
+}
+
+.ipt-record {
+    height: 30px;
+}
+
+.ipt-record a {
+    padding: 5px 15px;
+    float: right;
+}
+
+.diagnosis-result {
+    height: 40px;
+    padding: 10px 7px;
+    color: #999;
+    background: #fcfcfc;
+}
+
+.diagnosis-result span {
+    color: #000;
+    margin: 0 15px;
+}
+
+.diagnosis-result .pre-ord-check {
+    color: #4EB7E0;
+}
+
+.ipt-checks {
+    width: 20%;
+    padding: 5px;
+}
+
+.ipt-checks>div {
+    width: 50%;
+    height: 75px;
+    padding-top: 18px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ipt-checks>div:hover {
+    background: #f8f8f8;
+}
+
+.ipt-record i,
+.ipt-checks i {
+    margin-right: 5px;
+    color: #94A2AE;
+    font-size: 18px;
+}
+
+.ipt-patient-data {
+    background: #fff;
+}
+
+.ipt-patient-data-nav {height: 35px;}
+
+.ipt-patient-data-nav>div {
+    float: left;
+    width: 120px;
+    padding: 5px;margin-top: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #f2f2f2;
+    text-align: center;
+    cursor: pointer;
+}
+
+.ipt-patient-data-nav .action {
+    background: #4EB7E0;
+    color: #fff;
+}
+
+.hos-check-table-header {
+    min-height: 20px;
+    padding-left: 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background: rgba(200, 200, 200, 1);
+}
+
+.hos-check-table-header.action {
+    background: #2FA715;
+}
+
+.order-table-list {
+    padding: 10px;
+    overflow: auto;
+}
+
+.order-table-list .table-header {
+    margin-bottom: 0;
+}
+
+.order-table-list .table-header,
+.order-table-list .table-header td {
+    text-align: left;
+    border: none;
+    color: #999;
+}
+
+.order-table-list .table-header span {
+    margin-left: 5px;
+    color: #000;
+}
+
+.order-table {
+    margin-bottom: 15px;
+}
+
+.order-table-con {
+    position: relative;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.order-table-con .audit-status-icon {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+}
+
+.order-table-con td {
+    font-size: .75rem;
+    vertical-align: middle;
+}
+
+
+/*时间轴*/
+
+.ipt-info-timeline {
+    position: relative;
+    height: 5px;
+    margin: 15px 10px 30px 10px;
+    background: #eee;
+    border-radius: 4px;
+    color: #2BB5F5;
+}
+
+.ipt-info-gridline-1st,
+.ipt-info-gridline-2nd,
+.ipt-info-gridline-3rd,
+.ipt-info-gridline-4th {
+    position: absolute;
+    top: -6px;
+    width: 8px;
+    height: 18px;
+    background: #D8D8D8;
+    border-radius: 4px;
+}
+
+.ipt-info-gridline-1st {
+    left: 5px;
+}
+
+.ipt-info-gridline-2nd {
+    left: 25%;
+}
+
+.ipt-info-gridline-3rd {
+    left: 50%;
+}
+
+.ipt-info-gridline-4th {
+    left: 75%;
+}
+
+.ipt-info-gridline-1st>span,
+.ipt-info-gridline-2nd>span,
+.ipt-info-gridline-3rd>span,
+.ipt-info-gridline-4th>span {
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    width: 40px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.ipt-info-checkbox {
+    position: absolute;
+    top: -6px;
+    left: 5px;
+    width: 60px;
+    height: 18px;
+    border-radius: 9px;
+    background: #57b3f0;
+    cursor: pointer;
+    /*border: 2px solid rgb(245, 156, 201);*/
+}
+
+.ipt-info-content {
+    height: 30px;
+    vertical-align: middle;
+}
+
+.ipt-info-content i {
+    float: left;
+    width: 30%;
+    font-size: 18px;
+}
+
+.ipt-info-text {
+    width: 70%;
+    float: left;
+    line-height: 15px;
+    text-align: left;
+}
+
+.ipt-info-table>tbody>tr>td,
+.ipt-info-table>tbody>tr>th {
+    width: 12.5%;
+    background-color: #fff;
+}
+
+.ipt-info-vital p {
+    margin: 0 0;
+}
+
+.ipt-info-vital .ipt-info-vital-normal {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #94A2AE;
+}
+
+.ipt-info-position {
+    position: relative;
+}
+
+.ipt-info-previous,
+.ipt-info-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    cursor: pointer;
+}
+
+.ipt-info-previous {
+    left: 0;
+    border-right: 10px solid #999;
+}
+
+.ipt-info-next {
+    right: 0;
+    border-left: 10px solid #999;
+}
+
+.ipt-info-drug,
+.ipt-info-heat,
+.ipt-info-SBP,
+.ipt-info-DBP,
+.ipt-info-pulse,
+.ipt-info-RR,
+.ipt-info-HR,
+.ipt-info-SPOZ {
+    position: relative;
+    cursor: pointer;
+}
+
+.ipt-info-drug-hover {
+    position: absolute;
+    top: -210%;
+    left: -50%;
+    width: 200%;
+    padding: 5% 0;
+    background: #fff;
+    box-shadow: 0 0 10px 2px #888888;
+    border-radius: 5px;
+    z-index: 999;
+    visibility: hidden;
+}
+
+.ipt-info-heat-hover,
+.ipt-info-SBP-hover,
+.ipt-info-DBP-hover,
+.ipt-info-pulse-hover,
+.ipt-info-RR-hover,
+.ipt-info-HR-hover,
+.ipt-info-SPOZ-hover {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 30%;
+    border: 1px solid #999;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.ipt-info-drug:hover .ipt-info-drug-hover,
+.ipt-info-heat:hover .ipt-info-heat-hover,
+.ipt-info-SBP:hover .ipt-info-SBP-hover,
+.ipt-info-DBP:hover .ipt-info-DBP-hover,
+.ipt-info-pulse:hover .ipt-info-pulse-hover,
+.ipt-info-RR:hover .ipt-info-RR-hover,
+.ipt-info-HR:hover .ipt-info-HR-hover,
+.ipt-info-SPOZ:hover .ipt-info-SPOZ-hover {
+    visibility: visible;
+}
+
+.detail-dialog {
+    width: 80px;
+    min-height: 35px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.80);
+    border-radius: 3px;
+    padding: 5px 0;
+}
+
+.detail-dialog .detail-dialog-time {
+    color: #fff;
+    float: right;
+    padding-right: 5px;
+}
+
+.orderInfo {
+    position: fixed;
+    left: -100px;
+    top: -110px;
+    width: 200px;
+    height: 110px;
+    padding: 5px;
+    background: rgba(0, 0, 0, 0.80);
+    border-radius: 3px;
+    text-align: left;
+}
+
+.orderInfo p {
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+}
+
+
+/*检查单*/
+
+.popup-checklist {
+    min-width: 780px;
+    width: 65%;
+}
+
+.sheet-main-header {
+    margin-bottom: 0;
+    border: 0;
+    background: #ebf5ff;
+}
+
+.sheet-main-header td,
+.sheet-main-header th {
+    min-width: 150px;
+    padding: 5px;
+    border: 0;
+    text-align: left;
+    color: #999;
+}
+
+.sheet-main-header td span {
+    margin-left: 5px;
+    color: #000;
+}
+
+.sheet-main-con {
+    margin-bottom: 0;
+}
+
+.sheet-main-con th {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.sheet-main-con td {
+    border: 0;
+}
+
+.sheet-main-con td.space-line,
+.sheet-main-con th.space-line {
+    border-right: 1px solid #ccc;
+}
+
+.sheet-main-con td,
+.sheet-main-con th {
+    padding: 5px;
+    text-align: left;
+}
+
+.sheet-result {
+    min-height: 150px;
+    padding: 10px;
+    text-align: left;
+}
+
+.sheet-result h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #999;
+}
+
+
+/*手术*/
+
+.popup-operation {
+    min-width: 660px;
+}
+
+.patient-info {
+    margin: 0 0 5px 10px;
+}
+
+.patient-info:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.patient-info li {
+    float: left;
+    margin-right: 20px;
+    color: #999;
+    line-height: 20px;
+}
+
+.patient-info li span {
+    margin-left: 5px;
+    color: #000;
+}
+
+.operation-main-con {
+    margin-bottom: 0;
+}
+
+.operation-main-con td,
+.operation-main-con th {
+    text-align: left;
+    padding: 5px 7px;
+}
+
+.pre-suggest {
+    background: #fff;
+}
+
+.pre-suggest-num {
+    height: 35px;
+    padding: 5px 8px;
+    background: #fbfbfb;
+    color: #00a82e;
+    font-size: 14px;
+    line-height: 25px;
+    border-bottom: 1px solid #D9E4E7;
+}
+
+.green-dot-icon {
+    padding: 4px;
+    margin-right: 5px;
+    border-radius: 4px;
+    background: #00a82e;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.blue-rect-icon {
+    padding: 7px 3px;
+    margin-right: 5px;
+    background: #4EB7E0;
+    font-size: 0;
+    vertical-align: 4px;
+}
+
+.pre-suggest {
+    height: 100%;
+    background: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.pre-suggest-text {
+    padding: 5px 10px;
+}
+
+.audit-info-list {
+    margin-bottom: 10px;
+}
+
+.audit-info {
+    margin-left: 5px;
+    border-left: 1px solid #ccc;
+}
+
+.audit-info:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.blue-circle {
+    float: left;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #4EB7E0;
+    background: #fff;
+    border-radius: 50%;
+    margin: 8px 10px 0 -5px;
+}
+
+.pre-suggest-time {
+    padding: 5px 5px 5px 15px;
+    line-height: 20px;
+}
+
+.pre-suggest-info {
+    margin-left: 15px;
+    padding: 5px;
+    background: #f1f0ee;
+    border-radius: 3px;
+}
+
+.pre-suggest-drug-list {}
+
+.pre-suggest-drug {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.pre-suggest-drug:last-child {
+    border: none;
+    margin: 0;
+}
+
+.pre-suggest-drug .drug-name {
+    padding: 5px 10px;
+}
+
+.pre-suggest-drug .drug-warning-sug {
+    padding: 10px 10px 5px 20px;
+}
+
+.pre-suggest-drug .drug-warning-sug .warning-III {
+    color: #ff0000;
+}
+
+.pre-suggest-drug .drug-warning-sug .warning-II {
+    color: #ff7600;
+}
+
+.pre-suggest-drug .drug-warning-sug .warning-I {
+    color: #9b9b9b;
+}
+
+.pre-suggest-drug .drug-warning-sug input[type='checkbox'] {
+    vertical-align: -2px;
+    margin-right: 5px;
+}
+
+.pre-suggest-drug .drug-warning-sug .record-drug-inp {
+    margin: 5px 0 0 20px;
+}
+
+.msg-handle {
+    position: relative;
+    border-top: 1px solid #ccc;
+}
+
+.check-count {
+    padding: 5px 10px;
+}
+
+.check-textarea {
+    margin: 10px;
+}
+
+.check-textarea textarea {
+    width: 100%;
+    height: 60px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.msg-handle-btns {
+    margin: 0 10px;
+}
+
+.msg-handle-btns:after {
+    content: " ";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.msg-handle-btns .btn-secondary {
+    float: left;
+    margin-right: 10px;
+}
+
+.msg-handle-btns .btn-primary {
+    float: right;
+}
+
+.warning-msg {
+    margin-bottom: 5px;
+}
+
+.warning-msg input[type='checkbox'] {
+    vertical-align: -2px;
+}
+
+.warning-msg .warning-level {
+    margin-left: 5px;
+}
+
+.phar-suggestion {}
+
+.phar-suggestion span {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px;
+    background: #f2f2f2;
+    border-radius: 3px;
+}
+
+.doctor-opinion-first {
+    border-radius: 5px;
+    padding: 5px;
+    background: #FFCCCC;
+}
+
+.doctor-opinion-second {
+    border-radius: 5px;
+    padding: 5px;
+    background: #BBFF66;
+}
+
+.pre-suggest-handler {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+.pre-suggest-handler button {
+    margin: 0 5px;
+}
+
+.option-help{
+    float: right;
+    color: #000;
+    font-size: 12px;
+}
+
+/*popup*/
+
+.popup-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 1001;
+}
+
+.popup-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 300px;
+    max-width: 1100px;
+    background: #fff;
+}
+
+.popup-box .popup-header {
+    height: 50px;
+    padding: 15px 20px;
+    margin: 0;
+    background: #fff;
+    font-size: 16px;
+    text-align: center;
+    border-bottom: 1px solid #F5F7FA;
+}
+
+.popup-close {
+    float: right;
+}
+
+.popup-box .popup-body {
+    background: #fff;
+}
+
+.popup-body-nav {
+    height: 50px;
+    text-align: center;
+    padding: 10px 10px;
+    background: #F5F7FA;
+}
+
+.popup-body-nav a {
+    margin: 5px 10px;
+    display: inline-block;
+}
+
+.popup-box .popup-footer {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.popup-item-border {
+    border: 1px solid #ccc;
+}
+
+.sheet-main-header {
+    border: 1px solid #5AB7D6;
+    margin-bottom: 10px;
+}
+
+.popup-item-border .sheet-main-header {
+    border-left: 0;
+    border-right: 0;
+}
+
+
+/*检验单*/
+
+.popup-checklist {
+    height: 500px;
+}
+
+.popup-checklist-table {
+    margin: 10px;
+    background: #fff;
+}
+
+.popup-checklist-table-title {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.popup-checklist-content {
+    overflow: auto;
+}
+
+.sheet-main-con th {
+    padding: 10px 5px;
+}
+
+
+/*手术*/
+
+.popup-operation {
+    width: 650px;
+    height: 400px;
+}
+
+.popup-operation-table {
+    margin: 10px;
+    background: #fff;
+}
+
+.popup-operation-table-title {
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.popup-operation-content {
+    overflow: auto;
+}
+
+
+/*生命体征*/
+
+.popup-vital {
+    width: 800px;
+}
+
+.vital-normal {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #94A2AE;
+}
+
+
+/*非药医嘱*/
+
+.popup-advice {
+    width: 800px;
+    max-height: 550px;
+}
+
+.popup-advice-content {
+    max-height: 500px;
+    overflow: auto;
+}
+
+.popup-advice-table {
+    margin: 10px;
+}
+
+
+/*入院记录*/
+
+.popup-admission {
+    width: 700px;
+    max-height: 550px;
+}
+
+.popup-admission-content {
+    overflow: auto;
+    max-height: 500px;
+    margin: 10px;
+}
+
+.popup-admission-text>div {
+    margin-bottom: 10px;
+}
+
+.popup-admission-text>div label {
+    width: 60px;
+    text-align: right;
+    color: #666;
+}
+
+
+/*诊断记录*/
+
+.popup-diagnostic {
+    width: 600px;
+    max-height: 550px;
+}
+
+.popup-diagnostic-content {
+    max-height: 500px;
+    margin: 10px;
+    overflow: auto;
+}
+
+
+/*病程记录*/
+
+.popup-process {
+    width: 500px;
+    max-height: 550px;
+}
+
+.popup-process-content {
+    max-height: 500px;
+    margin: 10px;
+    overflow: auto;
+}
+
+
+/*过敏列表*/
+
+.popup-allergy {
+    width: 500px;
+}
+
+.popup-allergy-content {
+    margin: 10px;
+    max-height: 450px;
+    overflow: auto;
+}
+
+/*重点关注*/
+.vital-table td {
+    vertical-align: top;
+}
+
+.popup-asso{
+    width: 900px;
+    height: 550px;
+}
+.popup-asso-content{
+    overflow: auto;
+}
+.popup-asso-content > div{
+    margin: 20px 10px;
+}
+.asso-title{
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 10px solid #4EB7E0;
+    font-size: 18px;line-height: 25px;
+}

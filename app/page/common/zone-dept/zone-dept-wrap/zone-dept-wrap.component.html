@@ -1,0 +1,20 @@
+<div class="form-group form-inline dept-wrap" style="position: absolute;" [style.left]="position.left" [style.top]="position.top" [style.width]="position.width" *ngIf="options.isShow" (click)="stopPropagation($event)">
+    <!-- (mouseout)="hide()" (mouseover)="clearTimeout()"-->
+    <!--<div *ngIf="isShow">-->
+    <div class="popup-add-choice popup-both row" style="margin:0;" *ngIf="options.inputType==3">
+        <div class="col-6 flex column">
+            <zone-component (zoneClick)="emit($event)" (activeZoneClick)="activeZoneClick($event)" [deptList]="deptList" [deptAllCheckZone]="deptAllCheckZone"></zone-component>
+        </div>
+        <div class="col-6 flex column">
+            <dept-component (deptNodeClick)="emit($event)" (checkAll)="deptCheckAll($event)" [deptList]="deptList" [zone]="activeZone" [type]="options.type || ''"></dept-component>
+        </div>
+        <div class="popup-add-choice-triangle"></div>
+    </div>
+    <div style="padding:10px;" *ngIf="options.inputType==2">
+        <dept-component (deptNodeClick)="emit($event)" (checkAll)="deptCheckAll($event)" [deptList]="deptList" [zone]="activeZone" [type]="options.type || ''"></dept-component>
+    </div>
+    <div style="padding:10px;" *ngIf="options.inputType==1">
+        <zone-component (zoneClick)="emit($event)" (activeZoneClick)="activeZoneClick($event)" [deptList]="deptList"></zone-component>
+    </div>
+    <!--</div>-->
+</div>

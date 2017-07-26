@@ -1,0 +1,7 @@
+<div id="mousetips" class="mousetips" [style.position]="isFixed ? 'fixed' : 'absolute'" 
+    [style.left]="isFixed ? (posInfo.left + posInfo.offsetWidth/2 + 'px') : ''" [style.top]="isFixed ? (posInfo.top - 5 + 'px') : ''">
+    <span class="mousetips-body" id="mousetipsbody" [style.width]="conW" [style.textAlign]="textAlign">
+        <span [innerHTML]="title"></span>
+        <span class="mousetips-body-deco" id="mousetipsdeco"></span>
+    </span>
+</div>

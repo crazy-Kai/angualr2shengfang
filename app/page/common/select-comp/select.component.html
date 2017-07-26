@@ -1,0 +1,4 @@
+<select [(ngModel)]="activeIdx" (change)="optionClick($event)">
+	<option *ngFor="let obj of list;let i = index;" value="{{i}}">{{obj.name}}</option>
+</select>
+<!--[style.width]="option.width"-->

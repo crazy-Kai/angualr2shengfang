@@ -1,0 +1,115 @@
+<div class="flex column fillspace-sm">
+    <header>审方方案选择</header>
+    <div class="audit-plan flex1">
+        <!--上表格-->
+        <div class="row audit-plan-menu" style="border: none;">
+            <div class="col-12 form-inline audit-plan-list">
+                <label class="f-i-label">选择方案：</label>
+                <!-- <select class="audit-plan-select" [(ngModel)]="auditPlanTypeId" (ngModelChange)="getAuditPlan()">
+                    <option *ngFor="let auditPlan of auditPlanMap" [value]="auditPlan.id">{{auditPlan.name}}</option>
+                </select> -->
+                <input type="text" class="audit-plan-select ft14 form-control form-control-sm col-4" [(ngModel)]="auditPlanTypeName" placeholder="请选择方案" method="getAuditPlanMapOut" default="true" [autocomplete] (onChoosed)="getAuditPlan($event)" required>
+                <span class="icon-fail" [style.display]="auditPlanTypeName ? 'block' : 'none'" style="margin-left:-20px;z-index:1;color:#ddd;cursor:pointer;" (click)="auditPlanTypeName = '';"></span>
+                <label class="f-i-label audit-plan-new" routerLink="/page/audit-plan">+ 新建审方方案</label>
+            </div>
+            <div class="col-12 form-inline audit-plan-list mt-2">
+                <label class="f-i-label">已选择方案：</label>
+                <span class="audit-plan-dept-name" *ngFor="let _auditPlan of auditPlans">
+                        {{_auditPlan.name}}
+                        <span class="audit-plan-X" (click)="fnPlanDelete(_auditPlan,$event)">X</span>
+                </span>
+                <button type="button" class="btn btn-add btn-sm" (click)="addPlan()">+ 添加方案</button>
+            </div>
+            <div class="col-12 form-inline audit-plan-tip mt-2">
+                <label class="f-i-label"></label>
+                温馨提示：添加方案可添加多个方案审方，若不添加，则默认使用当前选中的方案
+            </div>
+        </div>
+        <!--中表格-->
+        <div class="audit-plan-menu-title flex1">
+            <div class="f-i-label">审方方案详情</div>
+        </div>
+        <div class="row audit-plan-menu">
+            <div class="col-6">
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">处方来源：</label>
+                    <!--recipeSource 0.全部||1.门诊||2.急诊-->
+                    <div class="audit-plan-text">{{auditPlan.recipeSource == 1 ? '门诊' : (auditPlan.recipeSource == 2 ? '急诊' : '全部')}}</div>
+                </div>
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">科室：</label>
+                    <div class="audit-plan-text">{{depts}}</div>
+                </div>
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">医生：</label>
+                    <div class="audit-plan-text">{{doctors}}</div>
+                </div>
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">患者：</label>
+                    <div class="audit-plan-text">{{auditPlan.patientCondition}}</div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">患者年龄：</label>
+                    <div class="audit-plan-text">{{auditPlan.minAge}} ~ {{auditPlan.maxAge}}{{auditPlan.ageUnit}}</div>
+                </div>
+                <!-- <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">费用类型：</label>
+                    <div class="audit-plan-text">{{auditPlan.costTypes}}</div>
+                </div> -->
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">诊断名称：</label>
+                    <div class="audit-plan-text">{{auditPlan.diagnoses}}</div>
+                </div>
+                <div class="form-inline audit-plan-list">
+                    <label class="f-i-label">ICD-10：</label>
+                    <div class="audit-plan-text">{{icd10}}</div>
+                </div>
+            </div>
+        </div>
+        <!--下表格-->
+        <div class="row audit-plan-menu">
+            <div class="col-6">
+                <!--药品分类组件-->
+                <div class="form-group form-inline audit-plan-list">
+                    <label class="f-i-label">药品分类：</label>
+                    <div class="audit-plan-text">{{drugCategorys}}</div>
+                </div>
+                <div class="form-inline audit-plan-list">
+                    <label class="f-i-label">药品属性：</label>
+                    <div class="audit-plan-text" style="min-width: 240px;min-height: 30px;">{{drugprops}}</div>
+                    <label *ngIf="auditPlan.category==1">
+                        <label class="f-i-label">&nbsp;</label>
+                        <span *ngIf="auditPlan.isOuvas">仅审核OUVAS处方</span>
+                    </label>
+                    <label *ngIf="auditPlan.category==2">
+                        <label class="f-i-label">&nbsp;</label>
+                        <span *ngIf="auditPlan.isPivas">仅审核PIVAS处方</span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-inline audit-plan-list">
+                    <label class="f-i-label">警示信息过滤条件：</label>
+                    <div>
+                        <div *ngFor="let infos of auditPlan.infoList" class="audit-plan-text">{{infos.analysisType}}/{{infos.message}}/{{infos.cautionStatus}}{{infos.symbol}}{{infos.severity}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="audit-plan-menu" style="border: none;">
+            <div class="form-inline audit-plan-list">
+                <label class="f-i-label">警示信息展示过滤：</label>
+                <div>
+                    <div *ngFor="let infos of auditPlan.displayInfoList" class="audit-plan-text">{{infos.analysisType}}/{{infos.message}}/{{infos.cautionStatus}}{{infos.symbol}}{{infos.severity}}</div>
+                </div>
+            </div>
+            <div style="max-width: 1100px; padding-top: 50px;">
+                <label class="f-i-label">&nbsp;</label>
+                <button type="button" class="audit-plan-footer-start" (click)="getAuditPlanSetting(auditPlan.id,auditPlan.category)">开始审方</button>
+            </div>
+        </div>
+    </div>
+</div>
+<prompt-component></prompt-component>

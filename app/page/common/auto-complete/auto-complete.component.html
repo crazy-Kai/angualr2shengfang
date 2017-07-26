@@ -1,0 +1,7 @@
+<input type="text" [placeholder]="option.placeholder" [(ngModel)]="keycode" (keyup)="getList()" (click)="getList()">
+<!--[style.width]="option.width"-->
+<ul class="acc-list" *ngIf="isShowList">
+	<li *ngFor="let result of list" (click)="fnSelect(result)">
+		{{result.name}}
+	</li>
+</ul>

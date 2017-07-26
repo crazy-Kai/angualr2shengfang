@@ -1,0 +1,187 @@
+.audit-plan{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.audit-plan .f-i-label{
+    width: 120px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+header {
+    font-size: 15px;
+    padding: 12px 0 8px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-menu {
+    padding: 25px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-menu>div.col-6 {
+    max-width: 550px;
+}
+
+.audit-plan-mandatory {
+    color: red;
+    margin-right: 5px;
+}
+
+.audit-plan-list {
+    position: relative;
+    /*height: 30px;*/
+}
+
+.audit-plan-list>label {
+    height: 30px;
+}
+
+.audit-plan-input,
+select.audit-plan-select {
+    height: 30px;
+    padding: 5px 10px;
+    color: #515253;
+    border: 1px solid #DFDFDF;
+}
+
+.audit-plan input[type='text'],
+.audit-plan select.audit-plan-select {
+    width: 280px;
+    margin-right: 10px;
+}
+
+.audit-plan input[type='number'] {
+    width: 92px;
+}
+
+.audit-plan input[type='radio'],
+.audit-plan input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+.audit-plan input[type='radio'] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #DFDFDF;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+
+.audit-plan input[type='radio']:checked {
+    border: 5px solid #55AA35;
+}
+
+.audit-plan-dept-select {
+    width: 280px;
+    display: inline-block;
+    min-height: 30px;
+    max-height: 90px;
+    border: 1px solid #DFDFDF;
+    background: #fff;
+    overflow: auto;
+}
+
+.audit-plan-dept-name {
+    display: inline-block;
+    height: 24px;
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #F5F5F5;
+    margin-right: 10px;
+}
+
+.audit-plan-ICD10-select,
+.audit-plan-category-select {
+    display: inline-block;
+    max-width: 280px;
+    max-height: 90px;
+    padding: 3px 0;
+    margin-right: 10px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.audit-plan-ICD10-name,
+.audit-plan-category-name {
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 0 10px 3px 0;
+    background-color: #F5F5F5;
+}
+
+.audit-plan-X {
+    display: inline-block;
+    font-size: 12px;
+    color: #CACACA;
+    cursor: pointer;
+}
+
+.audit-plan-X:hover{
+    color: #000;
+}
+
+.audit-plan-day-input,
+.audit-plan-age-input,
+.audit-plan-diagnose-input {
+    height: 30px;
+    padding: 5px 10px;
+    color: #515253;
+    border: 1px solid #DFDFDF;
+}
+
+select.audit-plan-age-select {
+    width: 55px;
+    height: 30px;
+    padding-left: 8px;
+    color: #515253;
+    border: 1px solid #DFDFDF; 
+}
+
+.btn-cancel {
+    width: 70px;
+    border: 1px solid #DFDFDF;
+    color: #515253;
+    background-color: #F1F1F1;
+    margin-right: 30px;
+}
+
+.btn-save {
+    width: 70px;
+    border: 1px solid #61BBE2;
+    color: #fff;
+    background-color: #61BBE2;
+}
+
+.audit-plan-old{
+    display: inline-block;
+    height: 30px;
+    width: 280px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 6px 10px 5px;
+    overflow: hidden;
+}
+
+.font-sm{
+    font-size: 12px;
+    color: #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

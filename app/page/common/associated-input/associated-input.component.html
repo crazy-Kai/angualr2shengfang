@@ -1,0 +1,4 @@
+<input type="text" [(ngModel)]="auditByModel" (ngModelChange)="changeProperty($event)" [ngbTypeahead]="searchAuditBy" [resultTemplate]="searchAuditByTemplate" [inputFormatter]="searchAuditByFormatter" />
+<template #searchAuditByTemplate let-r="result" let-t="term">
+    {{r[key]}}
+</template>

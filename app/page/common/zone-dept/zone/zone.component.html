@@ -1,0 +1,10 @@
+<div class="input-group" style="padding:0;">
+    <div class="input-group-addon icon-search" style="height: 30px;font-size: 12px;"></div>
+    <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="搜索院区" #zoneSearchBox [(ngModel)]="zoneKeyword" (keydown)="keydown($event)">
+</div>
+<ul class="flex1 mt-2">
+    <li *ngFor="let zone of zoneList;let i = index;" [class.clear-both]="i==0" [class.popup-add-choice-bg]="(i+1)%2==1" class="text-left popup-add-choice-bd">
+        <input type="checkbox" name="type" value="{{zone.name}}" [checked]="zone.checked" (click)="fnZoneClick($event.target.checked,zone)">
+        <span class="middle" (click)="fnZoneNameClick(zone)">{{zone.name}}</span>
+    </li>
+</ul>

@@ -1,0 +1,107 @@
+/*table{
+    border-collapse:collapse;
+    width: 100%;background: #fff;
+    margin: 0;
+}
+table th{
+    max-height: 58px;
+    background: #f9f9f9;
+}
+table, td, th{
+    border:1px solid #dfdfdf;
+}
+td, th{
+    padding: 5px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+.table-body td{
+    font-weight: 500;
+}
+
+.table-struc tr.selected, .table-struc tr.checked,
+.table-struc tr.selected, .table-struc tr.focus{
+    background: #e3f2ff;
+}
+.table-struc tr:hover{
+    background: #e3f2ff;
+    cursor: pointer;
+}
+.input-page{
+    width:50px;
+}
+
+my-tbody, tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+*/
+.hide-scroll{
+    margin-right: -7px;
+    overflow-y: scroll;
+}
+.hide-scroll .table-struc{
+    margin-bottom: 0;
+}
+.fixedContainer{
+    position: absolute;
+    left: 0;top: 0;right: 0;bottom: 0;
+    /*overflow: hidden;*/
+    display:-webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display:-moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display:-ms-flexbox;      /* TWEENER - IE 10 */
+    display:-webkit-flex;     /* NEW - Chrome */
+    display:flex; 
+}
+
+#pageBreak{
+    margin: 15px;
+}
+#pageBreak:after{
+    content: ' ';display: block;visibility: hidden;clear: both;
+}
+#pageBreak .curpage{
+    border: 1px solid #ddd;
+    min-width: 40px;display: inline-block;border-radius: 4px;
+    line-height: 28px;text-align: center;
+}
+#pageBreak .blink-page-ipt{
+    width: 45px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #444;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #DFDFDF;
+    padding: 5px 10px;
+    margin: 0 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0;
+}
+#pageBreak .btn-secondary:focus{
+    background-color: #fff;
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+}
+
+#pageBreak .page-btn {
+    border-radius: 0;
+    border: 1px solid #DFDFDF;
+    min-width: 34px;
+    height: 34px;
+    color: #444;
+    font-size: 13px;
+}
+
+#pageBreak select.page-select {
+    min-width: 80px;
+    height: 34px;
+    color: #444;
+    font-size: 13px;
+    border: 1px solid #DFDFDF;
+    border-radius: 0;
+}

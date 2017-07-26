@@ -1,0 +1,33 @@
+.mousetips {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -100%);
+}
+
+.mousetips-body {
+    position: relative;
+    display: inline-block;
+    max-width: 500px;
+    min-width: 75px;
+    padding: 5px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, .66);
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.mousetips-body-deco {
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    margin-left: -6px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, .66);
+}

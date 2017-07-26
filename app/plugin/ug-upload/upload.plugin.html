@@ -1,0 +1,27 @@
+<style>
+    .uploadComponent{position: relative;}
+    .uploadComponent input[type=file]{
+        position: absolute;left: 0;top: 0;z-index: 1002;
+        width: 120px;height: 30px;
+        opacity: 0;cursor: pointer;
+    }
+    .uploadComponent .btn-choose{
+        width: 120px;cursor: pointer;
+        overflow: hidden;text-overflow: ellipsis;white-space: nowrap;
+    }
+</style>
+<div>
+    <div *ngFor="let file of uploadService.fileList;let i = index;">
+        <a *ngIf="!file.imgFlag" (click)="downloadFile(i)">{{file.fileName}}</a>
+        <a *ngIf="file.imgFlag" (click)="openFile(i)">{{file.fileName}}</a>
+        <!--<span>当前版本</span>-->
+        <!--<a (click)="updateOrgVersion(i,$event)">过期</a>-->
+        <a style="color:red;" (click)="deleteOrg(i)">删除</a>
+    </div>
+    <!--<input type="file" #file (change)="addFile(file)">-->
+    <div class="uploadComponent">
+        <button class="btn btn-primary btn-sm btn-choose">上传文件</button>
+        <input type="file" #file (change)="addFile(file)" class="uploadFile">
+    </div>
+</div>
+<my-dialog></my-dialog>

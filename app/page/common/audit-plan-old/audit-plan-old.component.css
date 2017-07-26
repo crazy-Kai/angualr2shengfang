@@ -1,0 +1,28 @@
+.wrap{
+	position:absolute;
+    z-index: 1;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px #ccc;
+}
+.search{
+	width: 100%;
+    padding: 0 10px;
+}
+ul{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 200px;
+    font-size: 14px;
+}
+li{
+	height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0 10px;
+}
+li:hover{
+    background: #AAFFEE;
+}

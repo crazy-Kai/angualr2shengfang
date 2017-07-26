@@ -1,0 +1,35 @@
+export class OptRecipeOperation {
+    zoneId: number;
+    eventNo: string;
+    patientId: string;
+    keyDate: number;
+    operationId: string;
+    operationCode: string;
+    operationName: string;
+    deptId: string;
+    deptName: string;
+    operationStartTime: number;
+    operationEndTime: number;
+    operationIncisionType: string;
+    anesthesiaCode: string;
+    asa: string;
+    anesthesiaEndTime: number;
+    anesthesiaStartTime: number;
+    isImplant: number;
+    implantNo: string;
+    implantName: string;
+    isReoperation: number;
+    operationDocId: string;
+    operationDocName: string;
+    operationLevel: string;
+    operationSiteCode: string;
+    hemorrhageVolume: string;
+    operationSource: string;
+    preOpDiagCode: string;
+    preOpDiagName: string;
+    postOpDiagCode: string;
+    postOpDiagName: string;
+    nnis: string;
+    isSelectiveOperation: number;
+    constructor(){ }
+}

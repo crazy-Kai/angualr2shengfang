@@ -1,0 +1,56 @@
+/*自定义table样式*/
+table
+{
+    border-collapse:collapse;
+    width: 100%;background: #fff
+}
+    table th{
+        max-height: 58px;
+        background: #f9f9f9;
+    }
+table, td, th
+{
+    border:1px solid #dfdfdf;
+    padding:10px;
+}
+
+.table-drug tr.selected, .table-drug tr.checked{
+    background: #e3f3ff;
+}
+.table-drug tr:hover{
+    background: #e3f3ff;
+    cursor: pointer;
+}
+.input-page{
+    width:50px;
+}
+
+.table-body td{
+    font-weight: 500;
+}
+my-tbody,tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+#pageBreak{
+    margin-bottom:15px;
+}
+#pageBreak .curpage{
+    border: 1px solid #ddd;
+    min-width: 40px;display: inline-block;border-radius: 4px;
+    line-height: 28px;text-align: center;
+}
+/**
+* my-tbody
+*/
+.table-bordered>my-tbody>tr>td, .table-bordered>my-tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+.table>my-tbody>tr>td, .table>my-tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: middle;
+    border-top: 1px solid #ddd;
+}

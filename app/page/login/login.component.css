@@ -1,0 +1,115 @@
+.header {
+    height: 100px;
+}
+.w980 {
+    width: 980px;
+    margin: 0 auto;
+}
+.header .logo{
+    padding-top: 30px;
+    font-size: 20px;color: #767989;
+}
+.header .logo img{float: left;}
+.header .logo span{
+    float: left;
+    margin: 5px 0 0 15px;
+}
+.content {
+    height: 446px;
+    background: #26A69A;
+}
+.content-grid{
+    width: 1100px;height: 446px;margin: 0 auto;
+    background: url("app/images/skin.png") left top no-repeat;
+}
+.login {
+    float: right;margin-top: 41px;padding: 20px 15px;
+    width: 300px;height: 364px;overflow: hidden;
+    background: #F2F9FF;
+    color: #444;
+}
+.login .form-group{
+    margin-bottom: 10px;
+}
+.login input[type='text'], .login input[type='password']{
+    border: none;height: 38px;box-shadow: none;
+}
+.login .login-tit {
+    margin: 0;margin-bottom: 20px;padding: 0;
+    font-size: 18px;line-height: 45px;
+    color: #767989;
+}
+.login .accout-ipt{
+    height: 40px;border: 1px solid #e5e5e5;overflow: hidden;
+    /*padding-left: 30px;*/
+    /*background:#fff url("app/images/accout-icon.png") 10px center no-repeat;*/
+}
+.login .pwd-ipt{
+    height: 40px;border: 1px solid #e5e5e5;overflow: hidden;
+    /*padding-left: 30px;*/
+    /*background:#fff url("app/images/pwd-icon.png") 10px center no-repeat;*/
+}
+.login input[type="text"],.login input[type="password"]{
+    padding-left: 35px;
+}
+.login .accout-ipt input[type="text"]{
+    background:#fff url("app/images/accout-icon.png") 10px center no-repeat;
+}
+.login .pwd-ipt input[type="password"]{
+    background:#fff url("app/images/pwd-icon.png") 10px center no-repeat;
+}
+.login .btn{
+    height: 40px;margin-top: 40px;
+    background: #26A69A;color: #fff;
+}
+.login input[type='text'], .login input[type='password'] {
+    border: none;
+    height: 38px;
+    box-shadow: none;
+}
+.footer {
+    height: 100px;
+    color:#8C8C8C;
+}
+.footer p {
+    color: #3a3e44;
+    text-align: center;
+    padding-top: 40px;
+}
+a{
+    color:#26A69A;
+    text-align: left;
+    cursor: pointer;
+}
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    position: absolute;
+    margin-top: 4px\9;
+    margin-left: -20px;
+}
+input[type=checkbox], input[type=radio] {
+    margin: 4px 0 0;
+    margin-top: 1px\9;
+    line-height: normal;
+}
+.ft14{
+    font-size: 14px;
+}

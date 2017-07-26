@@ -1,0 +1,64 @@
+<div class="flex column fillspace-sm">
+    <div class="ipt-order-audit-header">
+        <button type="button" class="btn btn-sm btn-agree" [hidden]="!hasChecked()" (click)="batchAgree()">批量通过</button>
+        <button type="button" class="btn btn-sm btn-refuse" [hidden]="!hasChecked()" (click)="batchRefuse()">批量打回</button>
+        <button type="button" class="btn btn-sm btn-pending" [hidden]="!hasChecked()" (click)="batchPending()">批量挂起</button>
+        <button type="button" class="btn btn-close" title="确定结束审方？" (handler)="endAudit($event);" confirm-direc [disabled]="!receiveOrder"
+            [class.btn-disabled]="!receiveOrder">{{receiveOrder ? '结束审方' : '已停止接受任务'}}</button>
+    </div>
+    <div class="flex1 flex column">
+        <table class="table ipt-order-audit-table">
+            <tbody>
+                <tr style="height: 45px;">
+                    <th width="4%" style="min-width: 40px;">
+                        <input type="checkbox" [checked]="isAllChecked()" (click)="isAllCheck($event)">
+                    </th>
+                    <th width="14%">复核时间</th>
+                    <th width="8%">入院科室</th>
+                    <th width="7%">医生</th>
+                    <th width="10%">患者号</th>
+                    <th width="40%">警示信息</th>
+                    <th>操作</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="flex1" style="overflow-y: scroll;margin-right:-7px;">
+            <table class="table" style="margin: 0;">
+                <tbody>
+                    <tr *ngFor="let trow of waitAuditIptList;let i = index" (click)="putInCheckList(trow)" (dblclick)="onDblClick(trow)" style="height: 40px;border-bottom: 1px solid #DFDFDF;"
+                        [class.even-tr]="i%2 === 1">
+                        <td width="4%" align="center" style="min-width:35px;">
+                            <input type="checkbox" [checked]="isChecked(trow) >= 0">
+                        </td>
+                        <td width="14%">
+                            {{trow.checkTime | date:"yyyy-MM-dd HH:mm:ss"}}
+                            <span *ngIf="trow.urgentFlag == 1" class="urgent-flag">紧急</span>
+                            <span *ngIf="trow.holdingStatus == 1" class="urgent-flag">挂起</span>
+                        </td>
+                        <td width="8%">{{trow.inDeptName}}</td>
+                        <td width="7%">{{trow.doctorName}}</td>
+                        <td width="10%">{{trow.patientId}}</td>
+                        <td width="40%" class="warning-msg text-left">
+                            <div *ngFor="let infos of (trow.engineMsg || [])" [style.color]="infos.severity >= 5 ? '#f00' : (infos.severity == 4 ? '#000' : '#999')"
+                                style=" margin: 5px 0;">
+                                <div class="analysis-esult">{{infos.analysisResultType}}</div>：
+                                <div class="analysis-esult-message">{{infos.message}}<span>{{infos.severity}}</span></div>
+                            </div>
+                        </td>
+                        <td align="center">
+                            <button class="order-audit-operation" (click)="onDblClick(trow);$event.stopPropagation()">查看</button>|
+                            <button class="order-audit-operation" (click)="refuseIptOrderAudit(trow);$event.stopPropagation()" [disabled]="trow.engineMsg.length == 0"
+                                [class.btn-disabled]="trow.engineMsg.length == 0">打回</button>|
+                            <button class="order-audit-operation" (click)="agreeIptOrderAudit(trow);$event.stopPropagation()">通过</button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="!(waitAuditIptList && waitAuditIptList.length)" class="text-center" style="border-bottom: 1px solid #DFDFDF;">
+                        <td colspan="100">当前暂无待审医嘱</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <audit-tips [options]="auditOptions"></audit-tips>
+</div>
+<prompt-component></prompt-component>

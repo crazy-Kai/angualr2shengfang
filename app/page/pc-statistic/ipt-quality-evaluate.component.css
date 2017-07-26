@@ -1,0 +1,42 @@
+.evaluate-model{
+    height: 50px;padding: 10px 15px;
+    border-top: 1px solid #eee;
+    background: #fff;
+}
+.evaluate-model label{
+    margin-right: 10px;
+}
+.evaluate-model input[type='radio']{
+    margin-right: 5px;
+}
+.ipt-recommond {
+    width: 580px;
+    height: 30px;
+    margin-right: 10px;
+    font-size: 12px;
+    border: 1px solid #DFDFDF;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.evaluate-model div{
+    display: inline-block;
+    margin-right: 15px;
+    line-height: 30px;
+}
+.evaluate-model span{
+    color: #666;
+}
+.evaluate-model .btn-default{
+    margin: 0 5px;
+}
+.audit-status-icon {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+}
+.pre-ord{
+    position: relative;
+}

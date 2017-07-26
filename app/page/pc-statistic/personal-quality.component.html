@@ -1,0 +1,70 @@
+<div class="flex column fillspace-sm">
+    <div class="flex search-header">
+        <div class="flex1 form-inline" style="max-width: 1200px;">
+            <div class="col-5 form-group">
+                <label>　　日期：</label>
+                <time-interval [startTime]="searchParams.startTime" [endTime]="searchParams.endTime" (timeSetted)="updateSearchTime($event)"></time-interval>
+            </div>
+            <div class="col-4 form-group">
+                <label>评价人：</label>
+                <multi-choosen #checkPeople [dataOpt]="multiDataOpt" [static]="forbidEditParam" (select)="getPharmacists($event)"></multi-choosen>
+            </div>
+            <div class="col-3 form-group">
+                <label>来源：</label>
+                <select [(ngModel)]="searchParams.source" class="ipt-sm">
+                    <option value="0">门/急诊</option>
+                    <option value="1">门诊</option>
+                    <option value="2">急诊</option>
+                    <option value="3">住院</option>
+                </select>
+            </div>
+            <div class="col-5 form-group">
+                <label>评价结果：</label>
+                <select [(ngModel)]="searchParams.checkResult" class="ipt-sm">
+                    <option value="">全部</option>
+                    <option value="1">合理</option>
+                    <option value="0">不合理</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary btn-sm" (click)="search()">搜索</button>
+        </div>
+    </div>
+    <div id="project-table" class="flex1 flex column" style="position: relative">
+        <my-table #iptTable [hidden]="searchParams.source != 3" [table]="personalIptTable" [isFixedHeader]="true" (emitPagination)="getPagination($event)">
+            <template #tableTemplate let-tableinfo>
+                <tr *ngFor="let trow of tableinfo.dataList;let i = index;" [class.even-tr]="i%2 === 1">
+                    <td width="20%">{{trow.zoneName}}</td>
+                    <td width="10%">{{trow.areaName}}</td>
+                    <td width="10%">{{trow.deptName}}</td>
+                    <td width="10%">{{trow.checkPeopleName}}</td>
+                    <td width="20%">{{trow.checkTime | date: 'yyyy-MM-dd'}}<span class="time-wrap">{{trow.checkTime | date: ' HH:mm'}}</span></td>
+                    <td width="10%">{{trow.patientId}}</td>
+                    <td width="10%">{{trow.checkResult == 1 ? '合理' : '不合理'}}</td>
+                    <td (click)="reviewRecipe(trow)">查看</td>
+                </tr>
+                <tr *ngIf="!tableinfo.dataList || tableinfo.dataList.length == 0">
+                    <td colspan="9">无符合条件的数据</td>
+                </tr>
+            </template>
+        </my-table>
+        <my-table #optTable [hidden]="searchParams.source == 3" [table]="personalOptTable" [isFixedHeader]="true" (emitPagination)="getPagination($event)">
+            <template #tableTemplate let-tableinfo>
+                <tr *ngFor="let trow of tableinfo.dataList;let i = index;" [class.even-tr]="i%2 === 1">
+                    <td width="20%">{{trow.zoneName}}</td>
+                    <td width="10%">{{trow.deptName}}</td>
+                    <td width="10%">{{trow.doctorName}}</td>
+                    <td width="10%">{{trow.checkPeopleName}}</td>
+                    <td width="20%">{{trow.checkTime | date: 'yyyy-MM-dd'}}<span class="time-wrap">{{trow.checkTime | date: ' HH:mm'}}</span></td>
+                    <td width="10%">{{trow.patientId}}</td>
+                    <td width="10%">{{trow.checkResult == 1 ? '合理' : '不合理'}}</td>
+                    <td (click)="reviewRecipe(trow)">查看</td>
+                </tr>
+                <tr *ngIf="!tableinfo.dataList || tableinfo.dataList.length == 0">
+                    <td colspan="9">无符合条件的数据</td>
+                </tr>
+            </template>
+        </my-table>
+    </div>
+</div>

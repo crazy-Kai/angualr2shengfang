@@ -1,0 +1,35 @@
+<div id="pageBreak">
+    <span class="form-inline" style="float:left;">
+        显示
+        <select class="form-control form-control-sm page-select" [(ngModel)]="pagi.pageSize" (ngModelChange)="onChangePageSize()" style="margin: 0 5px;">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+        </select>
+        条
+        <span style="margin-left: 10px;">共<span style="color: #4EB7E0">{{pagi.recordCount}}</span>条</span>
+    </span>
+    <div style="float: right;">
+        <button class="btn btn-secondary btn-sm page-btn" (click)="firstPage()">首页</button>
+        <button class="btn btn-secondary btn-sm page-btn" (click)="prePage()" [disabled]="pagi.currentPage == 1">上一页</button>
+
+        <span *ngIf="pagi.currentPage - 3 > 0 ">...</span>
+        <button *ngIf="pagi.currentPage - 2 > 0" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(pagi.currentPage - 2)">{{pagi.currentPage - 2}}</button>
+        <button *ngIf="pagi.currentPage - 1 > 0" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(pagi.currentPage - 1)">{{pagi.currentPage - 1}}</button>
+        <button class="btn btn-secondary btn-sm page-btn" style="background: #4EB7E0;color: #fff;">{{pagi.currentPage}}</button>
+        <button *ngIf="pagi.totalPageCount - pagi.currentPage > 0" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(pagi.currentPage + 1)">{{pagi.currentPage + 1}}</button>
+        <button *ngIf="pagi.totalPageCount - pagi.currentPage > 1" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(pagi.currentPage + 2)">{{pagi.currentPage + 2}}</button>
+        <span *ngIf="pagi.totalPageCount - pagi.currentPage > 2">...</span>
+
+        <button class="btn btn-secondary btn-sm page-btn" (click)="nextPage()" [disabled]="pagi.currentPage >= pagi.totalPageCount">下一页</button>
+        <button class="btn btn-secondary btn-sm page-btn" (click)="lastPage()">尾页</button>
+        <span style="margin: 0 10px 0 30px;">
+            跳至
+            <input type="number" class="blink-page-ipt form-control-sm" [(ngModel)]="pagi.blinkPage" (keyup.enter)="specificPage()">
+            页
+        </span>    
+        <button class="btn btn-secondary btn-sm page-btn" (click)="specificPage()">跳转</button>
+    </div>
+</div>

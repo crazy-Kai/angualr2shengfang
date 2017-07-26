@@ -1,0 +1,172 @@
+.search-form{
+    margin-bottom: 10px;
+    padding: 10px 0 5px;
+    background: #fff;
+}
+
+.search-form-con {
+    align-items: center;
+}
+
+.search-form label{
+    width: 75px;
+    margin-right: 5px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.search-form input,
+.search-form select,
+.search-form-dept,
+.search-form-drug {
+    display: inline-block;
+    width: 145px;
+    height: 30px;
+    padding: 0 5px;
+    border: 1px solid #DFDFDF;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+.form-group{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.search-form-btn {
+    height: 30px;
+    min-width: 60px;
+    font-size: 12px;
+    color: #fff;
+    padding: 0 6px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #4EB7E0;
+}
+
+.audit-plan-dept-name {
+    display: inline-block;
+    height: 24px;
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #F5F5F5;
+    margin-right: 10px;
+}
+
+.audit-plan-X {
+    display: inline-block;
+    font-size: 12px;
+    color: #CACACA;
+    cursor: pointer;
+}
+
+.audit-plan-X:hover{
+    color: #000;
+}
+
+.tips-arrow{
+    margin-left: 5px;
+    vertical-align: 2px;
+    transition: all .5s ease-in-out;
+}
+
+.uparrow{
+    transform: rotate(-180deg);
+}
+
+.slide-bar {
+	text-align: center;
+}
+
+.download,
+.export {
+    display: inline-block;
+    min-width: 60px;
+    margin: 20px 20px 5px;
+    cursor: pointer;
+}
+
+.alert-message-check {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #5D9CEC;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.alert-message-check:hover {
+    color: #75B2FF;
+}
+
+.alert-message-check>mouse-tips {
+    font-size: 12px;
+}
+
+
+/*.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+	padding: 0;
+    margin: 0;
+}
+label{
+	padding-right: 10px;
+}
+.alert-msg-wrap {
+	background: #fff;
+}
+.alert-msg-wrap select, .alert-msg-wrap input {
+	width: 80%;
+}
+.query-bar {
+	position: relative;
+}
+.btn-block {
+	position: absolute;
+    right: 5px;
+    top: calc(50% - 1.125rem);
+}
+
+.slide-tip {
+	cursor: pointer;
+}
+.tips-arrow {
+    margin-left: 5px;
+    vertical-align: 2px;
+    transition: all .3s ease-in-out;
+}
+.uparrow {
+    transform: rotate(-180deg);
+}
+.like-input{
+	width: 80%;
+	height: 1.8125rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.add-program-header {
+    height: 30px;
+    line-height: 30px;
+}
+.add-program-checked {
+    color: #333;
+    cursor: pointer;
+}
+.dept-program-checked-select {
+    display: inline-block;
+    width: 300px;height: 30px;padding: 0 5px;
+    border: 1px solid #ccc;border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.dept-program-checked-select>span {
+    margin-left: 5px;
+}
+
+.table-shadow{
+    border-top: 4px solid #5bc0de;
+    border-radius: 8px;
+}*/

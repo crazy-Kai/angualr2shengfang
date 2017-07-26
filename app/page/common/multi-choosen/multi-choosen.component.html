@@ -1,0 +1,17 @@
+<div class="form-group form-inline multi-select">
+    <div class="multi-select-tar" (click)="open($event)">
+        <span class="selected-item" *ngFor="let item of choosenList">
+            {{item.name}}
+            <span class="close-icon" (click)="deleteItem(item, $event)">X</span>
+        </span>
+    </div>
+    <div class="choosen-list" *ngIf="isShowList" (click)="$event.stopPropagation()">
+        <input type="text" class="ipt-sm" [(ngModel)]="keycode" placeholder="输入名字" (keyup)="getList()">
+        <ul>
+            <li class="" *ngFor="let item of list" (click)="chooseItem(item)">
+                {{item.name}}
+                <span *ngIf="isChecked(item)" style="float: right;"><img src="../../../images/save-success.svg" alt="成功"/></span>
+            </li>
+        </ul>
+    </div>
+</div>

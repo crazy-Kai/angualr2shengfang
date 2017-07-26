@@ -1,0 +1,110 @@
+.audit-plan{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.audit-plan .f-i-label{
+    width: 120px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+select.audit-plan-select {
+    width: 280px;
+    height: 30px;
+    padding: 4px 10px;
+    color: #515253;
+    border: 1px solid #DFDFDF;
+}
+
+header {
+    font-size: 15px;
+    padding: 12px 0 8px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-menu {
+    padding: 25px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-menu>div.col-6 {
+    max-width: 550px;
+}
+
+.audit-plan-menu-title {
+    margin-bottom: 0; 
+    padding-bottom: 8px; 
+    padding-top: 5px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-mandatory {
+    color: red;
+}
+
+.audit-plan-list {
+    position: relative;
+}
+
+.audit-plan-list>label {
+    height: 30px;
+    line-height: 30px;
+}
+
+.audit-plan-new {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #4EB7E0;
+    cursor: pointer;
+}
+
+.audit-plan-new:hover {
+    color: #55CFFF;
+}
+
+.audit-plan-text {
+    max-width: 390px;
+    line-height: 30px;
+    color: #515253;
+}
+
+.audit-plan-footer-start {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #61BBE2;
+    color: #fff;
+    background-color: #61BBE2;
+    border-radius: 4px;
+}
+
+.audit-plan-tip{
+    font-size: 12px;
+    color: red;
+}
+.audit-plan-dept-name {
+    display: inline-block;
+    height: 24px;
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #F5F5F5;
+    margin-right: 10px;
+}
+.audit-plan-X {
+    display: inline-block;
+    font-size: 12px;
+    color: #CACACA;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+

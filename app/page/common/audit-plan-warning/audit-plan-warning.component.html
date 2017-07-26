@@ -1,0 +1,46 @@
+<div style="position:relative;">
+    <div class="form-group form-inline audit-plan-list" style="position:relative;" *ngFor="let warningItem of warningMap;let i = index;" (click)="stopPropagation($event)">
+        <!-- <label class="f-i-label">{{i==0?(label||'警示信息'):''}}</label> -->
+        <div class="audit-plan-warning-input" (click)="warningInputClick(warningItem)">{{warningItem.analysis.name}}/{{warningItem.analysisType.name}}/{{warningItem.analysisStatus}}</div>
+        <select class="audit-plan-warning-select" (change)="changeWarningLevelType($event.target.value, warningItem)">
+            <option value=""></option>
+            <option value=">" [selected]="warningItem.warningLevelType=='>'">&gt;</option>
+            <option value=">=" [selected]="warningItem.warningLevelType=='>='">&gt;=</option>
+            <option value="<" [selected]="warningItem.warningLevelType=='<'">&lt;</option>
+            <option value="<=" [selected]="warningItem.warningLevelType=='<='">&lt;=</option>
+            <option value="=" [selected]="warningItem.warningLevelType=='='">=</option>
+        </select>
+        <select class="audit-plan-warning-select" (change)="changeWarningLevel($event.target.value, warningItem)">
+            <option value=""></option>
+            <option value="0" [selected]="warningItem.warningLevel=='0'">0</option>
+            <option value="1" [selected]="warningItem.warningLevel=='1'">1</option>
+            <option value="2" [selected]="warningItem.warningLevel=='2'">2</option>
+            <option value="3" [selected]="warningItem.warningLevel=='3'">3</option>
+            <option value="4" [selected]="warningItem.warningLevel=='4'">4</option>
+            <option value="5" [selected]="warningItem.warningLevel=='5'">5</option>
+            <option value="6" [selected]="warningItem.warningLevel=='6'">6</option>
+            <option value="7" [selected]="warningItem.warningLevel=='7'">7</option>
+            <option value="8" [selected]="warningItem.warningLevel=='8'">8</option>
+            <option value="9" [selected]="warningItem.warningLevel=='9'">9</option>
+        </select>
+        <div class="audit-plan-warning-delete icon-delete" (click)="delete(i)"></div>
+        <!--警示信息下拉框-->
+        <div class="popup-add-info-text flex" *ngIf="warningItem.isAnalysisBoxShow">
+            <ul style="width:100px;">
+                <li *ngFor="let analysis of analysisMap" (click)="changeAnalysis(analysis, warningItem)" [class.checked]="warningItem.analysis == analysis">{{analysis.name}}</li>
+            </ul>
+            <ul class="flex1">
+                <li *ngFor="let analysisType of warningItem.analysisTypeMap" (click)="changeAnalysisType(analysisType, warningItem)" [class.checked]="warningItem.analysisType == analysisType">{{analysisType.name}}</li>
+            </ul>
+            <ul style="width:100px;" (click)="emit(warningItem)">
+                <li (click)="warningItem.analysisStatus='全部'" [class.checked]="warningItem.analysisStatus == '全部'">全部</li>
+                <li (click)="warningItem.analysisStatus='确认'" [class.checked]="warningItem.analysisStatus == '确认'">确认</li>
+                <li (click)="warningItem.analysisStatus='非待查'" [class.checked]="warningItem.analysisStatus == '非待查'">非待查</li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-group form-inline">
+        <!-- <label class="f-i-label">&nbsp;</label> -->
+        <button type="button" class="btn btn-add btn-sm" (click)="addWarning()">+ 添加警示信息条件</button>
+    </div>
+</div>

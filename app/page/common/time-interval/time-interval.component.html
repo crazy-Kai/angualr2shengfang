@@ -1,0 +1,7 @@
+<span (click)="$event.stopPropagation();">
+    <input class="timeipt search-form-time" placeholder="yyyy-mm-dd" (click)="toggleStart(startDateforSearch)" (ngModelChange)="setEndInterval($event)"
+        [maxDate]="maxStartDate" name="startDateforSearch" [(ngModel)]="startDate" tabIndex="-1" ngbDatepicker #startDateforSearch="ngbDatepicker" [disabled]="static">
+        <span style="margin: 0 5px;">-</span>
+    <input class="timeipt search-form-time" placeholder="yyyy-mm-dd" (click)="toggleEnd(endDateforSearch)" (ngModelChange)="setStrartInterval($event)"
+        [minDate]="minEndDate" [maxDate]="maxEndDate" name="endDateforSearch" [(ngModel)]="endDate" tabIndex="-1" ngbDatepicker #endDateforSearch="ngbDatepicker" [disabled]="static">
+</span>

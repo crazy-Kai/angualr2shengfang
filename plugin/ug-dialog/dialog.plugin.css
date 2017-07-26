@@ -1,0 +1,67 @@
+/**begin dialog styles**/
+.dialog{
+    width: 200px;
+    position: fixed;
+    left: 50%;
+    margin-left: -100px;
+    background:  rgba(0,0,0,0.5);
+    border-radius: 5px;
+    top: 200px;
+    z-index: 10002;
+}
+
+.dialog .dialog-message{
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.dialog .dialog-btn{
+    margin: 0px 10px 10px 10px;
+    color: #fff;
+    background: rgba(0,0,0,0.4);
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+/**end dialog styles**/
+
+/**begin dialog-template styles**/
+.mask{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    z-index: 10001;
+}
+.dialog-template{
+    height: 500px;
+    background: white;
+    border: 1px solid #000;
+    width: 1000px;
+    position: fixed;
+    left: 50%;
+    margin-left: -500px;
+    top: 20%;
+    z-index: 10002;
+    overflow: auto;
+}
+.dialog-template-content{
+    margin-top: 40px;
+    overflow: auto;
+}
+.dialog-template-title{
+    position: fixed;
+    width: 998px;
+    background: #61bbe2;
+    padding:10px;
+    color:white;
+    z-index: 10003;
+}
+    .dialog-template-title .icon-close{
+        float: right;
+        cursor: pointer;
+    }

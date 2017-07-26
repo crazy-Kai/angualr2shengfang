@@ -1,0 +1,37 @@
+<div class="popup-add" *ngIf="isICD10Show">
+    <div class="popup-add-doctor flex column">
+        <div class="popup-add-header">
+            选择ICD-10
+            <img class="popup-add-close" src="../../../images/close.svg" alt="关闭" (click)="cancel()">
+        </div>
+        <div class="popup-add-body flex1 flex">
+            <div class="flex1 flex column" style="padding: 10px;">
+                <div class="add-program-header" style="margin-bottom: 10px;">选择名称</div>
+                <div class="popup-add-body-left flex1 flex column">
+                    <div class="input-group" style="margin-bottom: 10px;min-height: 30px;">
+                        <div class="input-group-addon icon-search"></div>
+                        <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="请输入名称或代码" #icd10SearchBox
+                            (keyup)="searchICD10Text=icd10SearchBox.value">
+                    </div>
+                    <div class="flex1">
+                        <div class="text-left popup-add-margin">
+                            <icd10-tree #tree [keyword]="searchICD10Text" [options]="options" (onActivate)="chooseICD10s($event)"></icd10-tree>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex1 flex column" style="padding: 10px;">
+                <div class="add-program-header" style="margin-bottom: 10px;">已经选择</div>
+                <div class="popup-add-body-right flex1">
+                    <div *ngFor="let item of choosedICD10s;let i = index" (click)="choosedICD10s.splice(i, 1);">
+                        <input type="checkbox" checked>{{item.name ? item.name : item.dbdName}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-add-footer">
+            <button type="button" class="btn btn-secondary btn-sm" (click)="cancel()">取消</button>
+            <button type="button" class="btn btn-primary btn-sm ml-3" (click)="submit()">确定</button>
+        </div>
+    </div>
+</div>

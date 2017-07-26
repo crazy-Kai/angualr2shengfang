@@ -1,0 +1,53 @@
+<div class="flex column fillspace-sm">
+    <div class="form-group form-inline search-header">
+        <div class="flex1">
+            <span class="mr10">项目名称</span>
+            <input type="text" class="form-control ipt-sm mr10" name="keyword" [(ngModel)]="searchParams.projectName">
+            <button type="button" class="btn btn-primary btn-sm" (click)="getProjectList()">搜索</button>
+        </div>
+        <button type="button" class="btn btn-sm btn-primary fr" (click)="createProject()">新建评价项目</button>
+    </div>
+    <div id="review-pro-table" class="flex1 flex column" style="position: relative">
+        <table>
+            <tr>
+                <th width="20%">项目名称</th>
+                <th width="15%">创建时间</th>
+                <th width="10%">创建人</th>
+                <th width="25%">数据时间</th>
+                <th width="20%">评价进度</th>
+                <th width="10%">操作</th>
+            </tr>
+        </table>
+        <div class="flex1" style="overflow-y: scroll;margin-right: -7px;">
+            <table>
+                <tr *ngFor="let pro of proList;let i = index;" [class.odd]="i%2 == 1">
+                    <td width="20%">{{pro.projectName}}</td>
+                    <td width="15%">{{pro.createTime | date: 'yyyy/MM/dd'}}</td>
+                    <td width="10%">{{pro.createPeopleName}}</td>
+                    <td width="25%">{{pro.startDate | date: 'yyyy/MM/dd'}} - {{pro.endDate | date: 'yyyy/MM/dd'}}</td>
+                    <td width="20%">
+                        <div>
+                            <div class="progress-bar"><span [style.width]="pro.checkRate + '%'"></span></div>
+                            <span class="progress-rate">{{_math.floor(pro.checkRate)}}%</span>
+                        </div>
+                    </td>
+                    <td width="10%">
+                        <button class="btns icon-check" (click)="goProject(pro)" #review (mouseover)="showTips($event, review)" (mouseout)="review.show = false">
+                            <mouse-tips [title]="'查看项目'" [isFixed]='true' [posInfo]='posInfo' *ngIf="review.show"></mouse-tips>
+                        </button>
+                        <button class="btns icon-sheet" (click)="goExportSheet(pro)" #sheet (mouseover)="showTips($event, sheet)" (mouseout)="sheet.show = false"
+                             [class.btn-disabled]="pro.reportType == 0" [disabled]="pro.reportType == 0">
+                            <mouse-tips [title]="'查看报表'" [isFixed]='true' [posInfo]='posInfo' *ngIf="sheet.show"></mouse-tips>
+                        </button>
+                        <button class="btns icon-delete" (click)="deletProject(pro)" #delete (mouseover)="showTips($event, delete)" (mouseout)="delete.show = false"
+                             [class.btn-disabled]="pro.createPeopleId != user.userid" [disabled]="pro.createPeopleId != user.userid">
+                            <mouse-tips [title]="'删除项目'" [isFixed]='true' [posInfo]='posInfo' *ngIf="delete.show"></mouse-tips>
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <pagination [pageInfo]="pageInfo" (changePage)="setPage($event)" (changePageSize)="setPageSize($event)"></pagination>
+    </div>
+    <prompt-component></prompt-component>
+</div>

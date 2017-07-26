@@ -1,0 +1,382 @@
+<div class="flex column fillspace-15 container-fluid">
+    <div class="recipe-info">
+        <div class="pre-ckeck">
+            <a class="basic-back-btn icon-arrow-back" style="margin-top: 5px;" (click)="backToList()"><span>返回</span></a>
+            <span class="check-title text-center">处 方 审 核</span>
+            <a class="btn btn-secondary btn-sm" style="position: absolute;right:15px;top: 10px;padding: 5px;" (click)="goHisDetail()" *ngIf="patientInfo.hisUrl">详情</a>
+        </div>
+        <div class="check-header row">
+            <div class="check-header-patient col-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>　　　患者号：<span>{{patientInfo.patientId}}</span></td>
+                            <td>　　姓名：<span>{{patientInfo.name}}</span></td>
+                            <td>　　年龄：<span>{{patientInfo.age}}</span></td>
+                            <td>　　性别：<span>{{patientInfo.sex}}</span></td>
+                            <td>　　身高：<span>{{patientInfo.height}}</span></td>
+                        </tr>
+                        <tr>
+                            <td>　　　　体重：<span>{{patientInfo.weight}}</span></td>
+                            <td>体表面积： <span>{{patientInfo.bsa}}</span></td>
+                            <td>是否怀孕： <span>{{patientInfo.isPregnant == '0' ? '否' : (patientInfo.isPregnant == '1' ? '是' : '')}}</span></td>
+                            <td>　　孕期： <span>{{patientInfo.pregWeeks}}</span></td>
+                            <td>是否哺乳： <span>{{patientInfo.isLactation == '0' ? '否' : (patientInfo.isPregnant == '1' ? '是' : '')}}</span></td>
+                        </tr>
+                    </thead>
+                </table>
+                <div style="padding: 0 7px;color: #999;">
+                    <span class="patientAllergyFont">过敏药品列表：</span>
+                    <span>{{onAllergyDrug.join(',')}}</span>
+                    <span *ngIf="patientAllergyList.length<8" id="openAllergy" (click)="isAllergyListShow=true">查看</span>
+                </div>
+            </div>
+            <div class="checks col-4 row">
+                <div class="check-list col-4" (click)="showElecRecord()">
+                    <img src="../../images/electronic-medical-records.svg"> 查看电子病历
+                </div>
+                <div class="check-list col-4" (click)="showExam()">
+                    <img src="../../images/check-sheet.svg"> 查看检验/检查单
+                </div>
+                <div class="check-list col-4" (click)="showOperation()">
+                    <img src="../../images/operation.svg"> 查看手术
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="clear-both"></div>-->
+    <div class="flex1 row" style="overflow: auto;">
+        <div class="pre-ord-list pre-patient col-8">
+            <div class="pre-ord" *ngFor="let optRecipe of optRecipeList;let i = index;" (click)="checkRecipe(optRecipe)">
+                <div class="pre-ord-num" [class.pre-ord-action]="optRecipe==checkedRecipe">
+                    <span>处方号：{{optRecipe.recipeDetails.recipeNo}}</span>
+                    <span *ngIf="optRecipe.recipeDetails.auditStatus==7" style="font-size:13px; color:#f92424;">(退药处方)</span>
+                    <!--<span *ngIf="optRecipe.recipeDetails.auditStatus==8" style="font-size:13px; color:#f92424;">(此处方已分配给其他药师审核)</span>-->
+                </div>
+                <div class="pre-ord-table">
+                    <table class="table-header">
+                        <thead>
+                            <tr>
+                                <td><span>{{optRecipe.recipeDetails.recipeTime|date:"yyyy-MM-dd HH:mm:ss"}}</span></td>
+                                <td>科室：<span>{{optRecipe.recipeDetails.deptName}}</span></td>
+                                <td>医生：<span>{{optRecipe.recipeDetails.recipeDocName}}</span></td>
+                                <td>医生职称：<span>{{optRecipe.recipeDetails.recipeDocTitle}}</span></td>
+                                <td>诊断：<span>{{optRecipe.recipeDetails.diagnoseName}}</span></td>
+                                <td *ngIf="optRecipe.recipeDetails.recipeType == '草药方'">单贴金额：{{optRecipe.recipeDetails.herbUnitPrice}}</td>
+                                <td *ngIf="optRecipe.recipeDetails.recipeType == '草药方'">贴数：{{optRecipe.recipeDetails.herbPacketCount}}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table class="table-body">
+                        <tbody>
+                            <tr>
+                                <th>组号</th>
+                                <th>药品名称</th>
+                                <th>规格</th>
+                                <th>厂家</th>
+                                <th>{{optRecipe.recipeDetails.recipeType == '草药方'?'单贴剂量':'给药剂量'}}</th>
+                                <th>给药途径</th>
+                                <th>给药频率</th>
+                                <th>数量</th>
+                                <th>给药时机</th>
+                                <th>{{optRecipe.recipeDetails.recipeType == '草药方'?'煎法':'备注'}}</th>
+                                <th>重点关注</th>
+                            </tr>
+                            <tr *ngFor="let recipeDrug of optRecipe.recipeDrugList">
+                                <td>{{recipeDrug.groupNo}}</td>
+                                <td>
+                                    <a (click)="window.open(drugUrl + '?zoneId=' + recipeDrug.zoneId + '&productId=' + recipeDrug.drugId + '&type=0')">{{recipeDrug.drugName}}</a>
+                                </td>
+                                <td>{{recipeDrug.specification}}</td>
+                                <td>{{recipeDrug.manufacturerName}}</td>
+                                <td>{{recipeDrug.drugDose}}</td>
+                                <td>{{recipeDrug.drugAdminrouteName}}</td>
+                                <td>{{recipeDrug.drugUsingFreq}}</td>
+                                <td>{{recipeDrug.despensingNum}}{{recipeDrug.packUnit}}</td>
+                                <td>{{recipeDrug.drugUsingTimePoint}}</td>
+                                <td>{{recipeDrug.specialPrompt}}</td>
+                                <!--<td class="pre-ord-check">查看</td>-->
+                                <td class="pre-ord-check" (click)="getDrugRelated(recipeDrug)"><span class="icon-check"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="pre-suggest-list col-4">
+            <div class="pre-suggest flex column" name="recipe-warning">
+                <div class="pre-suggest-num"><span class="green-dot-icon"></span>处方号 : {{curRecipeNo}} 警示信息</div>
+                <div class="pre-suggest-text flex1" style="overflow: auto;">
+                    <div class="audit-info-list">
+                        <div class="audit-info" *ngFor="let result of auditResultList">
+                            <div class="blue-circle"></div>
+                            <div class="pre-suggest-time" *ngIf="result.auditStatus == 0">药师{{result.auditDoctorName}}打回了处方
+                                <p style="color: #999;margin-bottom: 0;">{{result.auditTime | date: 'yyyy-MM-dd HH:mm'}}</p>
+                            </div>
+                            <div class="pre-suggest-time" *ngIf="result.auditStatus == 1">药师{{result.auditDoctorName}}通过了处方
+                                <p style="color: #999;margin-bottom: 0;">{{result.auditTime | date: 'yyyy-MM-dd HH:mm'}}</p>
+                            </div>
+                            <div class="pre-suggest-time" *ngIf="result.auditStatus == 2">药师{{result.auditDoctorName}}超时通过了处方
+                                <p style="color: #999;margin-bottom: 0;">{{result.auditTime | date: 'yyyy-MM-dd HH:mm'}}</p>
+                            </div>
+                            <div class="pre-suggest-time" *ngIf="result.auditStatus == 3">系统自动通过了处方
+                                <p style="color: #999;margin-bottom: 0;">{{result.auditTime | date: 'yyyy-MM-dd HH:mm'}}</p>
+                            </div>
+                            <div class="pre-suggest-time" *ngIf="result.auditStatus == null">医生{{result.auditDoctorName}}处理了处方（{{resultisDoubledSign == 1 ? '双签名确认' : '忽略'}}）
+                                <p style="color: #999;margin-bottom: 0;">{{result.auditTime | date: 'yyyy-MM-dd HH:mm'}}</p>
+                            </div>
+                            <div class="pre-suggest-info" *ngIf="result.auditResult && result.auditStatus != null">评审意见：{{result.auditResult}}</div>
+                            <div class="pre-suggest-info" *ngIf="result.auditResult && result.auditStatus == null">回复：{{result.auditResult}}</div>
+                        </div>
+                    </div>
+                    <div class="pre-suggest-drug-list">
+                        <div class="pre-suggest-drug" *ngFor="let record of recordMap">
+                            <div class="drug-name">
+                                <span class="blue-rect-icon"></span> {{record.drugName}}
+                            </div>
+                            <div *ngFor="let message of record.messageList" class="drug-warning-sug">
+                                <div class="warning-msg" [class.warning-III]="message.severity >= 5" [class.warning-II]="message.severity >= 3 && message.severity <= 4" [class.warning-I]="message.severity <= 2" (click)="recordChecked(recordCheckBox.checked, message, record)">
+                                    <span>{{message.message}}</span>
+                                    <span class="warning-level">{{message.severity}}</span>
+                                </div>
+                                <div *ngFor="let opt of message.msgOperationRecordList" class="phar-suggestion">
+                                    <span *ngIf="opt.operateStatus==1">{{opt.operateType==1?'药师':'医生'}}{{opt.operatePeopleName}}勾选该条警示信息将处方打回，要求医生修改或双签名确认</span>
+                                    <span *ngIf="opt.operateStatus==2">{{opt.operateType==1?'药师':'医生'}}{{opt.operatePeopleName}}勾选该条警示信息将处方打回</span>
+                                    <span *ngIf="opt.isNeglect==1">{{!opt.operateType?'药师':'医生'}}{{opt.operatePeopleName}}忽略该条警示信息</span>
+                                    <span class="doctor-opinion-first" *ngIf="opt.isDoubledSign==1">{{opt.operateType==1?'药师':'医生'}}{{opt.operatePeopleName}}双签名确认</span>
+                                    <span class="doctor-opinion-first" *ngIf="opt.operateMessage != '' && opt.operateMessage != null">{{opt.operateType==1?'药师':'医生'}}{{opt.operatePeopleName}}回复：{{opt.operateMessage}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pre-suggest-handler">
+                    <button class="btn btn-sm" [class.btn-secondary]="!aroundIdx.previousId" [class.btn-primary]="aroundIdx.previousId" [disabled]="!aroundIdx.previousId" (click)="checkOptRecipe(aroundIdx.previousId);">上一次审核记录</button>
+                    <button class="btn btn-sm" [class.btn-secondary]="!aroundIdx.nextId" [class.btn-primary]="aroundIdx.nextId" [disabled]="!aroundIdx.nextId" (click)="checkOptRecipe(aroundIdx.nextId);">下一次审核记录</button>
+                </div>
+            </div>
+        </div>
+        <!--过敏药物信息-->
+        <!--<div class="popup-bg" id="popup" *ngIf="isAllergyListShow">
+            <div class="popup-box popup-allergy" id="popupAllergy">
+                <div class="popup-header">
+                    <a class="popup-close" (click)="isAllergyListShow = false" id="closeAllergy">x</a> 过敏信息
+                </div>
+                <div class="popup-body popup-allergy-content">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>过敏药物</th>
+                                <th>过敏反应</th>
+                            </tr>
+                            <tr *ngFor="let allergy of allergyList">
+                                <td>{{allergy.allergyDrug}}</td>
+                                <td>{{allergy.anaphylaxis}}</td>
+                            </tr>
+                            <tr *ngIf="!allergyList || allergyList.length <= 0">
+                                <td colspan="100">暂无过敏信息</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>-->
+        <div class="popup-bg" id="popup" *ngIf="isAllergyListShow">
+            <div class="popup-box popup-allergy" id="popupAllergy">
+                <div class="popup-header">
+                    <a (click)="isAllergyListShow = false" id="closeAllergy">x</a>
+                    <span>过敏信息</span>
+                </div>
+                <div class="popup-body popup-allergy-content">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <th>过敏药物</th>
+                                <th>过敏反应</th>
+                            </tr>
+                            <tr *ngFor="let allergy of patientAllergyList">
+                                <td>{{allergy.allergyDrug}}</td>
+                                <td>{{allergy.anaphylaxis}}</td>
+                            </tr>
+                            <tr *ngIf="!patientAllergyList || patientAllergyList.length <= 0">
+                                <td colspan="100">暂无过敏信息</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--重点关注-->
+    <div class="popup-gz" *ngIf="relatedInfoShow">
+        <div class="popup-box flex column popup-asso">
+            <div class="popup-header">
+                <span class="popup-header-title">重点关注</span>
+                <a class="popup-close" (click)="relatedInfoShow = false">ｘ</a>
+            </div>
+            <div class="popup-body flex1 popup-asso-content">
+                <!--无关联点提示-->
+                <div class="asso-tips" *ngIf="noInfo">
+                    <p>暂无关联点信息！</p>
+                </div>
+                <!--手术-->
+                <div class="asso-operation" *ngIf="relatedInfo && relatedInfo.operationList && relatedInfo.operationList.length > 0">
+                    <h3 class="asso-title">手术</h3>
+                    <div class="popup-operation-table" *ngFor="let operation of relatedInfo.operationList;let i = index;">
+                        <ul class="patient-info">
+                            <li>患者号 <span>{{operation.patientId}}</span></li>
+                            <li>患者姓名 <span>{{patientInfo.name}}</span></li>
+                        </ul>
+                        <table class="table operation-main-con">
+                            <tbody>
+                                <tr>
+                                    <th>手术名称</th>
+                                    <th>切口类型</th>
+                                    <th>手术开始时间</th>
+                                    <th>手术结束时间</th>
+                                </tr>
+                                <tr>
+                                    <td>{{operation.operationName}}</td>
+                                    <td>{{operation.operationIncisionType}}</td>
+                                    <td>{{operation.operationStartTime | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                                    <td>{{operation.operationEndTime | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--实验室指标-->
+                <div class="asso-lab" *ngIf="relatedInfo && relatedInfo.examList && relatedInfo.examList.length > 0">
+                    <h3 class="asso-title">实验室指标</h3>
+                    <div class="popup-checklist-table laboratory-findings" *ngFor="let exam of relatedInfo.examList;let i = index;">
+                        <table class="table sheet-main-con">
+                            <tr>
+                                <th width="4%">No.</th>
+                                <th width="15%">检验指标</th>
+                                <th width="6%">结果</th>
+                                <th width="10%">单位</th>
+                                <th width="10%" class="space-line">参考范围</th>
+                            </tr>
+                            <tr *ngFor="let indicator of exam.followerObj;let i = index;">
+                                <td>{{i + 1}}</td>
+                                <td>{{indicator.indicatorName}}</td>
+                                <td>{{indicator.examResult}}</td>
+                                <td>{{indicator.examResultUnit}}</td>
+                                <td>{{indicator.lowerLimit}}-{{indicator.upperLimit}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <!--影像检查-->
+                <div class="asso-imageExam" *ngIf="relatedInfo && relatedInfo.imageList && relatedInfo.imageList.length > 0">
+                    <h3 class="asso-title">影像检查</h3>
+                    <div class="popup-checklist-table popup-item-border" *ngFor="let imageItme of relatedInfo.imageList;let i = index">
+                        <div class="popup-checklist-table-title"><a>{{imageItme.imageName}}</a></div>
+                        <table class="table sheet-main-header">
+                            <tbody>
+                                <tr>
+                                    <td>患者号 <span>{{patientInfo.patientId}}</span></td>
+                                    <td>患者姓名 <span>{{patientInfo.name}}</span></td>
+                                    <td>性别 <span>{{patientInfo.sexStr}}</span></td>
+                                    <td>年龄 <span>{{patientInfo.ageStr}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>科室 <span>{{imageItme.applicantDeptName}}</span></td>
+                                    <td>送检医生 <span>{{imageItme.applicantName}}</span></td>
+                                    <td>检查项目 <span>{{imageItme.imageName}}</span></td>
+                                    <td>样本部位 <span>{{imageItme.performSite}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>体位 <span>{{imageItme.performSite}}</span></td>
+                                    <td>报告时间 <span>{{imageItme.reportTime | date:"yyyy-MM-dd HH:mm:ss"}}</span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sheet-result">
+                            <h4>内容：</h4>
+                            <div style="padding: 0 40px;">
+                                <p>{{imageItme.imagingPosition}}</p>
+                                <p>{{imageItme.imagingDiagnosis}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--特殊检查-->
+                <div class="asso-specialExam" *ngIf="relatedInfo && relatedInfo.specialExamList && relatedInfo.specialExamList.length > 0">
+                    <h3 class="asso-title">特殊检查</h3>
+                    <div class="popup-checklist-table popup-item-border" *ngFor="let specialExamItem of relatedInfo.specialExamList;let i = index">
+                        <div class="popup-checklist-table-title">{{specialExamItem.examItemName}}</div>
+                        <table class="table sheet-main-header">
+                            <tbody>
+                                <tr>
+                                    <td>患者号 <span>{{patientInfo.patientId}}</span></td>
+                                    <td>患者姓名 <span>{{patientInfo.name}}</span></td>
+                                    <td>性别 <span>{{patientInfo.sexStr}}</span></td>
+                                    <td>年龄 <span>{{patientInfo.ageStr}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>科室 <span>{{specialExamItem.applicantDeptName}}</span></td>
+                                    <td>送检医生 <span>{{specialExamItem.applicantName}}</span></td>
+                                    <td>检查项目 <span>{{specialExamItem.examItemName}}</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>报告时间 <span>{{specialExamItem.reportTime | date:"yyyy-MM-dd HH:mm:ss"}}</span></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sheet-result">
+                            <h4>内容：</h4>
+                            <div style="padding: 0 40px;">
+                                <p>{{specialExamItem.examConclusion}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--病理检查-->
+                <div class="asso-specialExam" *ngIf="relatedInfo && relatedInfo.pathologicalExamList && relatedInfo.pathologicalExamList.length > 0">
+                    <h3 class="asso-title">病理检查</h3>
+                    <div class="popup-checklist-table popup-item-border" *ngFor="let pathologicalExam of relatedInfo.pathologicalExamList;let i = index">
+                        <div class="popup-checklist-table-title">{{pathologicalExam.examItemName}}</div>
+                        <table class="table sheet-main-header">
+                            <tbody>
+                                <tr>
+                                    <td>患者号 <span>{{patientInfo.patientId}}</span></td>
+                                    <td>患者姓名 <span>{{patientInfo.name}}</span></td>
+                                    <td>性别 <span>{{patientInfo.sexStr}}</span></td>
+                                    <td>年龄 <span>{{patientInfo.ageStr}}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>科室 <span>{{pathologicalExam.applicantDeptName}}</span></td>
+                                    <td>送检医生 <span>{{pathologicalExam.applicantName}}</span></td>
+                                    <td>标本名称 <span>{{pathologicalExam.sampleName}}</span></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>送检时间 <span>{{pathologicalExam.performTime | date:"yyyy-MM-dd HH:mm:ss"}}</span></td>
+                                    <td>报告时间 <span>{{pathologicalExam.reportTime | date:"yyyy-MM-dd HH:mm:ss"}}</span></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="sheet-result">
+                            <h4>内容：</h4>
+                            <div style="padding: 0 40px;">
+                                <p>{{pathologicalExam.pathologicDiagnosis}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<laboratory-sheet [options]="sheetOptions" [recipeId]="recipeId" [patientInfo]="patientInfo" #sheets></laboratory-sheet>
+<operation-list [options]="operationOptions" [recipeId]="recipeId" [patientInfo]="patientInfo" #operation></operation-list>
+<elec-med-record [options]="elecMedOptions" [recipeId]="recipeId" [patientInfo]="patientInfo" #elecMedRecord></elec-med-record>

@@ -1,0 +1,74 @@
+.popup-bg{
+    position: fixed;top: 0;left: 0;width: 100%;height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+    z-index: 1001;
+}
+.popup-box{
+    position: fixed;left: 50%;top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;overflow: hidden;
+    min-width: 300px;max-width: 1100px;
+    background: #fff;
+}
+.popup-box .popup-header{
+    height: 50px;padding: 15px 20px;margin: 0;
+    background: #fff;
+    font-size: 16px;text-align: center;
+}
+.popup-close{
+    float: right;
+}
+.popup-box .popup-body{
+    background: #fff;
+}
+.popup-body-nav{
+    height: 50px;
+    text-align: center;
+    padding: 10px 10px;
+    background: #F5F7FA;
+}
+.popup-body-nav a{
+    margin: 5px 10px;
+    display: inline-block;
+}
+.popup-box .popup-footer{
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+.popup-operation{
+    width: 650px;
+    height: 400px;
+}
+.popup-operation-table{
+    margin: 10px;
+    background: #fff;
+}
+.popup-operation-table-title{
+    text-align: center;
+    padding: 15px 10px;
+}
+.popup-operation-content{
+    overflow: auto;
+}
+
+.patient-info{margin: 0 0 5px 10px;}
+.patient-info:after{
+    content: " ";display: block;visibility: hidden;clear: both;
+}
+.patient-info li{
+    float: left;margin-right: 20px;
+    color: #999;line-height: 20px;
+}
+.patient-info li span{
+    margin-left: 5px;
+    color: #000;
+}
+.operation-main-con{
+    margin-bottom: 0;
+}
+.operation-main-con td, .operation-main-con th{
+    text-align: left;
+    padding: 5px 7px;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="15px" viewBox="0 0 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="左边导航样式1" transform="translate(-10.000000, -134.000000)" fill="#FFFFFF">
+            <path d="M10,140.562493 L15.8333391,140.562493 L15.8333391,134 L10,134 L10,140.562493 L10,140.562493 Z M17.5,134 L17.5,136.812502 L25,136.812502 L25,134 L17.5,134 L17.5,134 Z M17.5,140.562493 L25,140.562493 L25,137.74999 L17.5,137.74999 L17.5,140.562493 L17.5,140.562493 Z M17.5,145.24999 L25,145.24999 L25,142.437488 L17.5,142.437488 L17.5,145.24999 L17.5,145.24999 Z M17.5,149 L25,149 L25,146.187498 L17.5,146.187498 L17.5,149 L17.5,149 Z M10,149 L15.8333391,149 L15.8333391,142.437488 L10,142.437488 L10,149 L10,149 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

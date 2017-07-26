@@ -1,0 +1,224 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/app/fonts/icomoon.eot?jjuouy');
+  src:  url('/app/fonts/icomoon.eot?jjuouy#iefix') format('embedded-opentype'),
+    url('/app/fonts/icomoon.ttf?jjuouy') format('truetype'),
+    url('/app/fonts/icomoon.woff?jjuouy') format('woff'),
+    url('/app/fonts/icomoon.svg?jjuouy#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-antibacterialsflag:before {
+  content: "\e900";
+}
+.icon-arrow-back:before {
+  content: "\e901";
+}
+.icon-arrows-down:before {
+  content: "\e902";
+}
+.icon-arrows-right:before {
+  content: "\e903";
+}
+.icon-calendar .path1:before {
+  content: "\e904";
+  color: rgb(81, 82, 83);
+}
+.icon-calendar .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path3:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path4:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path5:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path6:before {
+  content: "\e909";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path7:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path8:before {
+  content: "\e90b";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path9:before {
+  content: "\e90c";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar .path10:before {
+  content: "\e90d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-calendar-icon:before {
+  content: "\e90e";
+}
+.icon-caution:before {
+  content: "\e90f";
+}
+.icon-check:before {
+  content: "\e910";
+}
+.icon-check-exam:before {
+  content: "\e911";
+}
+.icon-check-nonorder:before {
+  content: "\e912";
+}
+.icon-check-operation:before {
+  content: "\e913";
+}
+.icon-check-vitalsign:before {
+  content: "\e914";
+}
+.icon-close:before {
+  content: "\e915";
+}
+.icon-delete:before {
+  content: "\e916";
+}
+.icon-download:before {
+  content: "\e917";
+}
+.icon-edit:before {
+  content: "\e918";
+}
+.icon-electronic-medical-records:before {
+  content: "\e919";
+}
+.icon-exam-image:before {
+  content: "\e91a";
+}
+.icon-exam-normal:before {
+  content: "\e91b";
+}
+.icon-export:before {
+  content: "\e91c";
+}
+.icon-fail:before {
+  content: "\e91d";
+}
+.icon-folder:before {
+  content: "\e91e";
+}
+.icon-injectable-flag:before {
+  content: "\e91f";
+}
+.icon-ipt-back:before {
+  content: "\e920";
+}
+.icon-logo .path1:before {
+  content: "\e921";
+  color: rgb(255, 255, 255);
+}
+.icon-logo .path2:before {
+  content: "\e922";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-logo .path3:before {
+  content: "\e923";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-logo .path4:before {
+  content: "\e924";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-lung:before {
+  content: "\e925";
+}
+.icon-menu-alert-message:before {
+  content: "\e926";
+}
+.icon-menu-audit:before {
+  content: "\e927";
+}
+.icon-menu-result:before {
+  content: "\e928";
+}
+.icon-menu-set:before {
+  content: "\e929";
+}
+.icon-menu-statistics:before {
+  content: "\e92a";
+}
+.icon-modify:before {
+  content: "\e92b";
+}
+.icon-new:before {
+  content: "\e92c";
+}
+.icon-operation:before {
+  content: "\e92d";
+}
+.icon-pharmacist:before {
+  content: "\e92e";
+}
+.icon-progress:before {
+  content: "\e92f";
+}
+.icon-progress-1:before {
+  content: "\e930";
+}
+.icon-question:before {
+  content: "\e931";
+}
+.icon-record:before {
+  content: "\e932";
+}
+.icon-record-1:before {
+  content: "\e933";
+}
+.icon-reply-info:before {
+  content: "\e934";
+}
+.icon-search:before {
+  content: "\e935";
+}
+.icon-start-audit:before {
+  content: "\e936";
+}
+.icon-success:before {
+  content: "\e937";
+}
+.icon-tick:before {
+  content: "\e938";
+}
+

@@ -1,0 +1,21 @@
+.virtual-scroll{
+    position: absolute;
+    right: 0;top: 0;bottom: 0;
+    width: 10px;
+    overflow: hidden;
+}
+.virtual-track{
+    background: rgba(0, 0, 0, .33);
+}
+.virtual-block{
+    position: absolute;
+    left: 0;top: 0;
+    display: block;
+    background: rgba(0, 0, 0, .66);
+}
+.arrows-up{
+    background:url("app/images/arrow-down.svg") center center no-repeat;
+}
+.arrows-down{
+
+}

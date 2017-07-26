@@ -1,0 +1,120 @@
+<div class="flex column fillspace-sm">
+    <div class="header-bar">
+        <a class="basic-back-btn icon-arrow-back" (click)="backToList()"><span>返回</span></a>
+    </div>
+    <div class="flex search-header">
+        <div class="flex1 form-inline" style="max-width: 1200px;">
+            <div class="col-5 form-group">
+                <label>　　日期：</label>
+                <time-interval [startTime]="extractParams.startTime" [endTime]="extractParams.endTime" [static]="forbidEditParam" (timeSetted)="updateSearchTime($event)"></time-interval>
+            </div>
+            <div class="col-4 form-group">
+                <label>药师：</label>
+                <multi-choosen #audit [dataOpt]="multiDataOpt" [static]="forbidEditParam" (select)="getPharmacists($event)"></multi-choosen>
+            </div>
+            <div class="col-3 form-group">
+                <label>来源：</label>
+                <select [(ngModel)]="extractParams.source" class="ipt-sm" [disabled]="forbidEditParam">
+                    <option value="0">门/急诊</option>
+                    <option value="1">门诊</option>
+                    <option value="2">急诊</option>
+                    <option value="3">住院</option>
+                </select>
+            </div>
+            <div class="col-5 form-group" style="height: 30px;">
+                <label>抽取方式：</label>
+                <label class="hand"><input type="radio" name="extractType" (change)="changeType(1)" [checked]="extractParams.type == 1" [disabled]="forbidEditParam">全部</label>
+                <label class="hand"><input type="radio" name="extractType" (change)="changeType(2)" [checked]="extractParams.type == 2" [disabled]="forbidEditParam">按百分比</label>
+                <label class="hand"><input type="radio" name="extractType" (change)="changeType(3)" [checked]="extractParams.type == 3" [disabled]="forbidEditParam">指定随机数量</label>
+            </div>
+            <div class="col-7 form-group" *ngIf="extractParams.type == 2">
+                <label>百分比：</label>
+                <input type="text" placeholder="请输入0-100" class="ipt-sm" [(ngModel)]="extractParams.resultPercentage" [disabled]="forbidEditParam"> %
+            </div>
+            <div class="col-7 form-group" *ngIf="extractParams.type == 3">
+                <label>指定随机数量：</label>
+                <input type="text" placeholder="请输入大于0的整数" class="ipt-sm" [(ngModel)]="extractParams.randomNum" [disabled]="forbidEditParam">
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-primary btn-sm" (click)="getCheckList()" *ngIf="!projectId">抽取</button>
+        </div>
+    </div>
+    <div id="project-table" class="flex1 flex column">
+        <div class="project-infos">
+            <span>评价进度：{{checkedNum}}/{{totalNum}}</span>
+            <span>
+                状态：
+                <select class="ipt-sm" [(ngModel)]="extractResultParams.checkStatus" (change)="getWorkStatistics(true)">
+                    <option value="">全部</option>
+                    <option value="1">已评价</option>
+                    <option value="0">未评价</option>
+                </select>
+            </span>
+            <button *ngIf="!projectId" class="btn btn-primary btn-sm" style="float:right;" (click)="startSaveProcess()" [disabled]="!qualified">保存项目</button>
+            <button *ngIf="projectId" class="btn btn-primary btn-sm" style="float:right;" (click)="startExport()" [disabled]="!authority">生成报表</button>
+        </div>
+        <div class="flex1" style="position: relative">
+            <my-table #iptTable [hidden]="tabelType == 1" [table]="projectIptTable" [isFixedHeader]="true" [notInit]="true" (emitPagination)="getPagination($event)" (onload)="resolveData($event)">
+                <template #tableTemplate let-tableinfo>
+                    <tr *ngFor="let trow of tableinfo.dataList;let i = index;" [class.even-tr]="i%2 === 1">
+                        <td width="20%">{{trow.zoneName}}</td>
+                        <td width="10%">{{trow.inWardName}}</td>
+                        <td width="10%">{{trow.deptName}}</td>
+                        <td width="10%">{{trow.auditDoctorName}}</td>
+                        <td width="10%">{{trow.auditTime | date: 'yyyy-MM-dd'}}<span class="time-wrap">{{trow.auditTime | date: ' HH:mm'}}</span></td>
+                        <td width="10%">{{trow.patientId}}</td>
+                        <td width="10%">{{trow.name}}</td>
+                        <td width="10%">{{trow.checkStatus == 1 ? '已评价' : '未评价'}}</td>
+                        <td (click)="goEvaluate(trow)">查看</td>
+                    </tr>
+                    <tr *ngIf="initialed && (!tableinfo.dataList || tableinfo.dataList.length == 0)">
+                        <td colspan="9">无符合条件的数据</td>
+                    </tr>
+                </template>
+            </my-table>
+            <my-table #optTable [hidden]="tabelType == 2" [table]="projectOptTable" [isFixedHeader]="true" [notInit]="true" (emitPagination)="getPagination($event)" (onload)="resolveData($event)">
+                <template #tableTemplate let-tableinfo>
+                    <tr *ngFor="let trow of tableinfo.dataList;let i = index;" [class.even-tr]="i%2 === 1">
+                        <td width="20%">{{trow.zoneName}}</td>
+                        <td width="10%">{{trow.deptName}}</td>
+                        <td width="10%">{{trow.recipeDocName}}</td>
+                        <td width="10%">{{trow.auditDoctorName}}</td>
+                        <td width="10%">{{trow.auditTime | date: 'yyyy-MM-dd'}}<span class="time-wrap">{{trow.auditTime | date: ' HH:mm'}}</span></td>
+                        <td width="10%">{{trow.patientId}}</td>
+                        <td width="10%">{{trow.name}}</td>
+                        <td width="10%">{{trow.checkStatus == 1 ? '已评价' : '未评价'}}</td>
+                        <td (click)="goEvaluate(trow)">查看</td>
+                    </tr>
+                    <tr *ngIf="initialed && (!tableinfo.dataList || tableinfo.dataList.length == 0)">
+                        <td colspan="9">无符合条件的数据</td>
+                    </tr>
+                </template>
+            </my-table>
+        </div>
+    </div>
+    <!--保存项目-->
+    <div class="wrapper" *ngIf="savePro">
+        <div class="save-pro">
+            <div class="w-ipt">
+                <h3 class="title">保存项目</h3>
+                <div class="pro-ipt row">
+                    <div class="col-4" style="text-align: right;line-height: 30px;">项目名称： </div>
+                    <div class="pro-name-model col-8">
+                        <input id="pro-name-ipt" type="text" class="ipt-sm" [(ngModel)]="projectName">
+                        <span class="ipt-warning" *ngIf="warningMsg">{{warningMsg}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="w-btns">
+                <button class="btn btn-sm btn-primary" (click)="saveProject()">确定</button>
+                <button class="btn btn-sm btn-secondary" (click)="savePro = false;">取消</button>
+            </div>
+        </div>
+    </div>
+    <!--导出报表-->
+    <prompt-component></prompt-component>
+
+    <!--提示-->
+    <audit-tips [options]="tipsOptions"></audit-tips>
+</div>

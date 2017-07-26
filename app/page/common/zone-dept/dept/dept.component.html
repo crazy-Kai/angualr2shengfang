@@ -1,0 +1,17 @@
+<div class="input-group" style="padding:0;">
+    <div class="input-group-addon icon-search" style="height: 30px;font-size: 12px;"></div>
+    <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="搜索科室" [(ngModel)]="deptKeyword" #deptSearchBox (keydown)="keydown($event)">
+</div>
+<div class="flex1 mt-2" style="max-height:150px;overflow:auto;">
+    <!-- <input type="checkbox" name="type" value="全选" [checked]="isDeptAllCheck" (click)="deptClick()"> 全选 -->
+    <!-- <div *ngFor="let dept of deptList;let i = index;" class="text-left">
+        <input type="checkbox" name="type" value="{{dept.name}}" [checked]="dept.checked" (click)="deptClick(dept)">
+        {{dept.name}}
+    </div> -->
+    <Tree #tree [nodes]="dataList" [options]="options">
+	    <template #treeNodeTemplate let-node>
+	        <input type="checkbox" name="type" [checked]="node.data.checked" (click)="nodeCBoxClick(node.data)">
+	        <span class="middle">{{ node.data.name }}</span>
+	    </template>
+    </Tree>
+</div>

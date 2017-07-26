@@ -1,0 +1,34 @@
+<div class="sliding-container" id="container">
+    <div class="sliding-bar"></div>
+    <div class="sliding-handle" (mousedown)="mouseDown($event)" id="handle"></div>
+</div>
+<table>
+    <thead>
+        <th>时间</th>
+        <th>10/2</th>
+        <th>10/3</th>
+        <th>10/4</th>
+        <th>10/5</th>
+        <th>10/6</th>
+        <th>10/7</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>体温</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<div style="position:relative">
+    <svg [style.width]="option.param.width" [style.height]="option.param.height" version="1.1" style="position: absolute;left: 153px;top: -59px;">
+        <polyline [attr.points]="positionStr" style="fill:white;stroke:red;stroke-width:2" />
+        <circle *ngFor="let data of positionArr;let i = index" [attr.cx]="data.x" [attr.cy]="data.y" r="5" stroke="red" stroke-width="2"
+            fill="red" (mouseover)="showDetail(data,i)" (mouseout)="hideDetail()" />
+    </svg>
+    <div class="detail-dialog" *ngIf="dialog.show" [style.left]="dialog.x" [style.top]="dialog.y">{{dialog.msg}}</div>
+</div>

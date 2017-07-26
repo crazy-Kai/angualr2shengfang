@@ -1,0 +1,87 @@
+.audit-setting-header {
+    margin: 20px 0;
+}
+
+.audit-setting-search {
+    margin-left: -15px;
+    margin-right: 15px;
+}
+
+.audit-plan-new,
+.search-btn {
+    color: #fff;
+    background-color: #4EB7E0;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.audit-setting-search-btn {
+    margin-left: 10px;
+}
+
+.audit-setting-search-input {
+    width: 180px;
+    height: 30px;
+    font-size: 12px;
+    border: 1px solid #DFDFDF;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+
+.audit-setting-operation {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #5D9CEC;
+    vertical-align: middle;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+
+.audit-setting-operation>mouse-tips {
+    font-size: 12px;
+}
+
+.icon-delete {
+    font-size: 15px;
+}
+
+.icon-check {
+    padding-top: 0.1rem;
+}
+
+.audit-setting-operation:hover {
+    color: #75B2FF;
+}
+
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.reset {
+    position: absolute;
+    left: 175px;
+    top: 8px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.btn-disabled {
+    cursor: not-allowed;
+    color: #ccc;
+}
+
+.btn-disabled:hover {
+    color: #ccc;
+}

@@ -1,0 +1,43 @@
+<div>
+    <div class="login-content">
+        <!--hearder begin-->
+        <div class="header w980">
+            <div class="logo">
+                <img src="../../images/logo.png" alt=""><span>{{title}}</span>
+            </div>
+        </div>
+        <!--hearder end-->
+        <!--content begin-->
+        <div class="content">
+            <div class="content-grid">
+                <div class="login">
+                    <h3 class="login-tit">登 录</h3>
+                    <div class="form-group accout-ipt flex">
+                        <input type="text" class="form-control ft14" [(ngModel)]="zone" placeholder="{{zoneTip}}" method="getZoneList" [autocomplete] (onChoosed)="fnZoneSelect($event)" required>
+                    </div>
+                    <div class="form-group accout-ipt flex">
+                        <input type="text" class="form-control ft14" [(ngModel)]="username" placeholder="{{userNameTip}}" required>
+                    </div>
+                    <div class="form-group pwd-ipt flex">
+                        <input type="password" class="form-control ft14" [(ngModel)]="password"  placeholder="{{passwordTip}}" required (keyup.enter)="onEnterPressed($event)">
+                    </div>
+                    <div class="checkbox keep-pwd">
+                        <label>
+                            <input type="checkbox" [(ngModel)]="lockPwd" [checked]="lockPwd">
+                            <span class="ft14">记住密码</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" (click)="onSubmit()" class="btn btn-block">登　　录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--content end-->
+        <!--footer begin-->
+        <div class="footer">
+            <p class="f-14"><a href="/tools/aq.action">处方评估</a> | <a href="/tools/search_data_list.action">资料查询</a> | Copyright © 2012-2015 杭州逸曜信息技术有限公司 版权所有.</p>
+        </div>
+        <!--footer end-->
+    </div>
+</div>

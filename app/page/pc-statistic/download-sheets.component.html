@@ -1,0 +1,59 @@
+<div class="flex column fillspace-sm">
+   <div class="flex1 flex column">
+        <div class="text-right">
+            <div class="export" (click)="exportExcel()">
+                <span class="icon-export" style="color: #515253;margin-right: 8px;"></span>导出
+            </div>
+            <div class="export" (click)="exportList()">
+                <span class="icon-download" style="color: #515253;margin-right: 8px;"></span>下载
+            </div>
+        </div>
+        <table class="table pharmacists-statistic-th">
+            <thead>
+                <tr style="height: 45px;">
+                    <th width="10%">序号</th>
+                    <th width="10%">药师</th>
+                    <!--<th width="16%" *ngFor="let title of titles">
+                        <div class="order-header">
+                            {{title.title}}
+                            <span style="position: relative" #tipsId>
+                                <mouse-tips [posInfo]="posInfo" [title]="title.tips" [conW]="'200px'" *ngIf="title.tips && tipsId.show"></mouse-tips>
+                                <span class="icon-question" style="cursor: help" (mouseover)="showTips($event, tipsId)" (mouseout)="hideTips(tipsId)"></span>
+                            </span>
+                            <div class="order-btns">
+                                <span class="order-asc" [class.current]="searchParams.sortBy == title.sortBy && searchParams.order == 'asc'" (click)="reloadByOrder(title, 'asc')"></span>
+                                <span class="order-desc" [class.current]="searchParams.sortBy == title.sortBy && searchParams.order == 'desc'" (click)="reloadByOrder(title, 'desc')"></span>
+                            </div>
+                        </div>
+                    </th>-->
+                    <th width="16%">处方/医嘱数量</th>
+                    <th width="16%">审核合理数量</th>
+                    <th width="16%">审核不合理数量</th>
+                    <th width="16%">审核合格率</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="flex1" style="overflow-y: scroll;margin-right: -7px;">
+            <table class="table" style="margin: 0;">
+                <tbody>
+                    <tr *ngFor="let item of reportList; let i = index" [class.even-tr]="i%2 === 1">
+                        <td width="10%">{{i + 1}}</td>
+                        <td width="10%">{{item.pharmacistName}}</td>
+                        <td width="16%">{{item.sampleNum}}</td>
+                        <td width="16%">{{item.reasonableNum}}</td>
+                        <td width="16%">{{item.unreasonableNum}}</td>
+                        <td width="16%">{{item.qualifiedRate}}%</td>
+                        <!--<td width="16%">{{item.docTakeNumber}}</td>-->
+                    </tr>
+                    <tr *ngIf="!reportList || reportList.length <= 0">
+                        <td colspan="100" style="padding: 10px 0;">没有找到相关数据</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <pagination [pageInfo]="pageInfo" (changePage)="setPage($event)" (changePageSize)="setPageSize($event)"></pagination>
+    </div>
+</div>
+<prompt-component></prompt-component>
+<iph-download *ngIf="downloadWin" (closeWin)="downloadWin = false"></iph-download>
+<audit-tips [options]="auditOptions"></audit-tips>

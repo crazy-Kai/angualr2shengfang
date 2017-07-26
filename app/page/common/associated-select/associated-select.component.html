@@ -1,0 +1,6 @@
+<div class="col-lg-1 text-right add-program-header">{{title}}</div>
+<label class="col-lg-11 add-program-input-1st">
+    <select (change)="changeProperty($event.target.value)">
+        <option *ngFor="let propertyItem of propertyList" value="{{propertyItem.name}}" [selected]="drugPropertyResult.indexOf(propertyItem.name)>=0">{{propertyItem.name}}</option>
+    </select>
+</label>

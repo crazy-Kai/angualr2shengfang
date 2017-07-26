@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e80c731e-d328-4e83-a3f1-5e1d91ed658b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< Updated upstream
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js" afterPath="$PROJECT_DIR$/app/app.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.routes.js" afterPath="$PROJECT_DIR$/app/app.routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/can-deactivate-guard.service.js" afterPath="$PROJECT_DIR$/app/can-deactivate-guard.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.js" afterPath="$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/alert-message/alert-message-details.js" afterPath="$PROJECT_DIR$/app/page/alert-message/alert-message-details.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/alert-message/alert-message-details.service.js" afterPath="$PROJECT_DIR$/app/page/alert-message/alert-message-details.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/alert-message/list/alert-message.component.js" afterPath="$PROJECT_DIR$/app/page/alert-message/list/alert-message.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/audit-plan-icd10.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/audit-plan-icd10.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/icd10-dialog.component.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/icd10-dialog.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-plan-map.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-plan-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-plan.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-plan.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-review.component.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-review.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-review.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-review.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/audit-setting/audit-review.service.js" afterPath="$PROJECT_DIR$/app/page/audit-setting/audit-review.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/associated-input/associated-input.component.js" afterPath="$PROJECT_DIR$/app/page/common/associated-input/associated-input.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/associated-select/associated-select.component.js" afterPath="$PROJECT_DIR$/app/page/common/associated-select/associated-select.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.component.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.service.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-zone.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-zone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.component.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.service.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-zone.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-zone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.component.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.service.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.service.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.service.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis-type.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis-type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning-map.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.service.js" afterPath="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-directive.js" afterPath="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-directive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-window.component.js" afterPath="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-window.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete.service.js" afterPath="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/auto-complete/auto-complete.component.js" afterPath="$PROJECT_DIR$/app/page/common/auto-complete/auto-complete.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/drug_category/drug_category_dialog.component.js" afterPath="$PROJECT_DIR$/app/page/common/drug_category/drug_category_dialog.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/drug_category/drug_category_tree.component.js" afterPath="$PROJECT_DIR$/app/page/common/drug_category/drug_category_tree.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/elec-med-record/elec-med-record.component.js" afterPath="$PROJECT_DIR$/app/page/common/elec-med-record/elec-med-record.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/get-first-ele.pipe.js" afterPath="$PROJECT_DIR$/app/page/common/get-first-ele.pipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.component.js" afterPath="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.service.js" afterPath="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/mousetips/mousetips.component.js" afterPath="$PROJECT_DIR$/app/page/common/mousetips/mousetips.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/operation-list/operation-list.component.js" afterPath="$PROJECT_DIR$/app/page/common/operation-list/operation-list.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/pagination/pagination.component.js" afterPath="$PROJECT_DIR$/app/page/common/pagination/pagination.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/select-comp/select.component.js" afterPath="$PROJECT_DIR$/app/page/common/select-comp/select.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/time-interval/time-interval.component.js" afterPath="$PROJECT_DIR$/app/page/common/time-interval/time-interval.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/common/zone-dept/zone/zone.component.js" afterPath="$PROJECT_DIR$/app/page/common/zone-dept/zone/zone.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/audit-plan-choose-map.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/audit-plan-choose-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.component.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.service.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/audit-result.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/audit-result.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/ipt-order.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/ipt-order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-allergy.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-allergy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-diagnose.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-diagnose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-drug-sensitive.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-drug-sensitive.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-map.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-message-opt.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-message-opt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam-indicator.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam-indicator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-image.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-info.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-info.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-ipt-record.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-ipt-record.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-non-order.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-non-order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-operation.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-operation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-progress.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-special-exam.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-special-exam.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-vital-sign.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-vital-sign.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.service.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-audit-result.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-audit-result.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details-exam.pipe.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details-exam.pipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.service.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-drugs.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-drugs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam-indicator.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam-indicator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-image.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-map.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-medical.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-medical.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-operation.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-operation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-patient.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-patient.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-map.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message-opt.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message-opt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-special-exam.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-special-exam.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-review/opt-details.service.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-review/opt-details.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-review/recipe-list.service.js" afterPath="$PROJECT_DIR$/app/page/ipt-opt-review/recipe-list.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.component.js" afterPath="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.service.js" afterPath="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-dialog/adhoc-component-factory.service.js" afterPath="$PROJECT_DIR$/app/plugin/ug-dialog/adhoc-component-factory.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.content.plugin.js" afterPath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.content.plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.js" afterPath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.model.js" afterPath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.plugin.js" afterPath="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-table/adhoc-component-factory.service.js" afterPath="$PROJECT_DIR$/app/plugin/ug-table/adhoc-component-factory.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-table/table.js" afterPath="$PROJECT_DIR$/app/plugin/ug-table/table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-table/table.model.js" afterPath="$PROJECT_DIR$/app/plugin/ug-table/table.model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-table/table.module.js" afterPath="$PROJECT_DIR$/app/plugin/ug-table/table.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-table/table.plugin.js" afterPath="$PROJECT_DIR$/app/plugin/ug-table/table.plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-table/tbody.content.plugin.js" afterPath="$PROJECT_DIR$/app/plugin/ug-table/tbody.content.plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-upload/upload.plugin.js" afterPath="$PROJECT_DIR$/app/plugin/ug-upload/upload.plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/plugin/ug-upload/upload.service.js" afterPath="$PROJECT_DIR$/app/plugin/ug-upload/upload.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/rxjs-operators.js" afterPath="$PROJECT_DIR$/app/rxjs-operators.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/server.interceptor.js" afterPath="$PROJECT_DIR$/app/server.interceptor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/test-line-chart.component.js" afterPath="$PROJECT_DIR$/app/test/test-line-chart.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/util/position.js" afterPath="$PROJECT_DIR$/app/util/position.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/polyfills.js" afterPath="$PROJECT_DIR$/src/polyfills.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/vendor.js" afterPath="$PROJECT_DIR$/src/vendor.js" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/menu.service.js" afterPath="$PROJECT_DIR$/app/menu.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html" afterPath="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html" />
+>>>>>>> Stashed changes
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="shenfang" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="popup.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/page/common/popup.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="menu.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/menu.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
+            <state relative-caret-position="-342">
+              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+=======
+            <state relative-caret-position="-74">
+              <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="60" />
+>>>>>>> Stashed changes
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
+      <file leaf-file-name="opt-audit-plan-choose.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+=======
+      <file leaf-file-name="opt-recipe-details.component.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="684">
+              <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+>>>>>>> Stashed changes
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
+      <file leaf-file-name="opt-recipe-details.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+=======
+      <file leaf-file-name="opt-recipe-details.component.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+>>>>>>> Stashed changes
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
+      <file leaf-file-name="opt-recipe-details.component.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-829">
+              <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+=======
+      <file leaf-file-name="alert-message-details.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/page/alert-message/alert-message-details.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+>>>>>>> Stashed changes
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< Updated upstream
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+=======
+      <file leaf-file-name="alert-message-details.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+>>>>>>> Stashed changes
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>config</find>
+      <find>webpack</find>
+      <find>task</find>
+      <find>reflect-metadata</find>
+      <find>package</find>
+      <find>zone-dept-wrap.component.</find>
+      <find>审方方案新建/编辑</find>
+      <find>router</find>
+<<<<<<< Updated upstream
+      <find>患者号</find>
+=======
+      <find>处方审核</find>
+      <find>·</find>
+      <find>查看电子病历</find>
+      <find>opt-recipe-review-details.component</find>
+      <find>check-header</find>
+      <find>opt-audit-plan-choose</find>
+      <find>患者号</find>
+      <find>table</find>
+>>>>>>> Stashed changes
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\yiyao\shenfang</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.html" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.ts" />
+<<<<<<< Updated upstream
+        <option value="$PROJECT_DIR$/.gitignore" />
+=======
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.html" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css" />
+>>>>>>> Stashed changes
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="alert-message" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shenfang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Language Defaults" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e80c731e-d328-4e83-a3f1-5e1d91ed658b" name="Default" comment="" />
+      <created>1488175055110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1488175055110</updated>
+      <workItem from="1488175058320" duration="7760000" />
+      <workItem from="1488184027319" duration="5350000" />
+      <workItem from="1488189593322" duration="8255000" />
+<<<<<<< Updated upstream
+      <workItem from="1488247258689" duration="5760000" />
+      <workItem from="1488267017700" duration="1737000" />
+=======
+      <workItem from="1488247258689" duration="15884000" />
+>>>>>>> Stashed changes
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
+    <option name="totallyTimeSpent" value="28862000" />
+=======
+    <option name="totallyTimeSpent" value="37249000" />
+>>>>>>> Stashed changes
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+<<<<<<< Updated upstream
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.025764896" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6006441" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.52495974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/app/page/common/zone-dept/dept/dept.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/zone-dept/zone-dept-wrap/zone-dept-wrap.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-vital-sign.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-diagnose.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-progress.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam-indicator.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-drug-sensitive.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-message.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/audit-result.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-special-exam.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-message-opt.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-info.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-non-order.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-map.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-ipt-record.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-image.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-operation.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/ipt-order.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-allergy.js" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/list/alert-message.component.js" />
+        <option value="$PROJECT_DIR$/app/test/test-line-chart.component.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/audit-plan-icd10.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/icd10-dialog.component.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/icd10-tree.component.js" />
+        <option value="$PROJECT_DIR$/app/util/position.js" />
+        <option value="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.service.js" />
+        <option value="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/get-first-ele.pipe.js" />
+        <option value="$PROJECT_DIR$/app/page/common/mousetips/mousetips.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/pagination/pagination.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/select-comp/select.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete/auto-complete.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/drug_category/drug_category_dialog.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/drug_category/drug_category_tree.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/time-interval/time-interval.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/operation-list/operation-list.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-zone.js" />
+        <option value="$PROJECT_DIR$/app/page/common/elec-med-record/elec-med-record.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/associated-input/associated-input.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/associated-select/associated-select.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-zone.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis-type.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning-map.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-window.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-directive.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.component.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.js" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.service.js" />
+        <option value="$PROJECT_DIR$/app/page/common/zone-dept/zone/zone.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/ipt-recipe-review-details.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/recipe-search-param.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/ipt-recipe-review.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/ipt-details.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/recipe-list.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-details.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-special-exam.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-map.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-patient.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-medical.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-drugs.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-image.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message-opt.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details-exam.pipe.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/audit-plan-choose-map.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-audit-result.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-operation.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.service.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-map.js" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam-indicator.js" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.js" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/alert-message-details.js" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/alert-message-details.service.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-setting.component.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan.service.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-map.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-review.component.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-setting.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan.component.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-review.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-review.service.js" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-setting.service.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-upload/upload.plugin.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-upload/upload.service.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.plugin.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.content.plugin.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.model.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/adhoc-component-factory.service.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/adhoc-component-factory.service.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.model.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.module.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/tbody.content.plugin.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.js" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.plugin.js" />
+        <option value="$PROJECT_DIR$/app/menu.service.js" />
+        <option value="$PROJECT_DIR$/app/server.interceptor.js" />
+        <option value="$PROJECT_DIR$/app/app.module.js" />
+        <option value="$PROJECT_DIR$/app/app.component.js" />
+        <option value="$PROJECT_DIR$/app/can-deactivate-guard.service.js" />
+        <option value="$PROJECT_DIR$/app/rxjs-operators.js" />
+        <option value="$PROJECT_DIR$/app/app.routes.js" />
+        <option value="$PROJECT_DIR$/src/main.js" />
+        <option value="$PROJECT_DIR$/src/main.js.map" />
+        <option value="$PROJECT_DIR$/src/polyfills.js" />
+        <option value="$PROJECT_DIR$/src/vendor.js.map" />
+        <option value="$PROJECT_DIR$/src/vendor.js" />
+        <option value="$PROJECT_DIR$/src/polyfills.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-old/audit-plan-old.component.js" />
+        <option value="$PROJECT_DIR$/app/rxjs-operators.js.map" />
+        <option value="$PROJECT_DIR$/app/app.module.js.map" />
+        <option value="$PROJECT_DIR$/app/app.routes.js.map" />
+        <option value="$PROJECT_DIR$/app/server.interceptor.js.map" />
+        <option value="$PROJECT_DIR$/app/can-deactivate-guard.service.js.map" />
+        <option value="$PROJECT_DIR$/app/app.component.js.map" />
+        <option value="$PROJECT_DIR$/app/menu.service.js.map" />
+        <option value="$PROJECT_DIR$/app/test/test-line-chart.component.js.map" />
+        <option value="$PROJECT_DIR$/app/util/position.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/get-first-ele.pipe.js.map" />
+        <option value="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/pc-statistic/pharmacists-statistic.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/alert-message-details.js.map" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/alert-message-details.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-map.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-review.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-review.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-setting.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-review.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-setting.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/recipe-list.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/ipt-recipe-review-details.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/ipt-details.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-details.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/ipt-recipe-review.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-review/recipe-search-param.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-map.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-map.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-special-exam.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-image.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-operation.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/audit-plan-choose-map.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-audit-plan-choose.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam-indicator.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details-exam.pipe.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-patient.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-drugs.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-medical.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-audit-result.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message-opt.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-record-message.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-exam.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.model.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.plugin.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/tbody.content.plugin.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/adhoc-component-factory.service.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-table/table.module.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.plugin.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/adhoc-component-factory.service.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.model.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.content.plugin.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-dialog/dialog.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-upload/upload.plugin.js.map" />
+        <option value="$PROJECT_DIR$/app/plugin/ug-upload/upload.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/mousetips/mousetips.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/pagination/pagination.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/select-comp/select.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete/auto-complete.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/drug_category/drug_category_dialog.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/drug_category/drug_category_tree.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/time-interval/time-interval.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-old/audit-plan-old.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/operation-list/operation-list.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-zone.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/elec-med-record/elec-med-record.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/associated-input/associated-input.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/associated-select/associated-select.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-zone.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning-map.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-analysis-type.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-warning/audit-plan-warning.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-pay-type/audit-plan-pay-type.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-directive.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/auto-complete-directive/autocomplete-window.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/audit-plan-drug-property/audit-plan-drug-property.service.js.map" />
+        <option value="$PROJECT_DIR$/app/page/alert-message/list/alert-message.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/audit-plan-icd10.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/icd10-tree.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/audit-setting/audit-plan-icd10/icd10-dialog.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/ipt-order.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/audit-result.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-info.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-message.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam-indicator.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-vital-sign.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-non-order.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-allergy.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-special-exam.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-message-opt.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-engine-map.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-ipt-record.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-exam.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-diagnose.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-progress.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-drug-sensitive.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-image.js.map" />
+        <option value="$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details/patient-operation.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/zone-dept/dept/dept.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/zone-dept/zone/zone.component.js.map" />
+        <option value="$PROJECT_DIR$/app/page/common/zone-dept/zone-dept-wrap/zone-dept-wrap.component.js.map" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/app/util/position.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/polyfills.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/util/position.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-details.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2398">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack.dev.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/karma.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/plugin/ug-table/table.js.map" />
+    <entry file="file://$PROJECT_DIR$/app/plugin/ug-table/table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> Stashed changes
+    <entry file="file://$PROJECT_DIR$/app/plugin/ug-table/table.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="3" column="53" lean-forward="true" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/plugin/ug-table/tbody.content.plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/npm-debug.log" />
+    <entry file="file://$PROJECT_DIR$/app/util/position.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/node-sass/bin/node-sass" />
+    <entry file="file://$PROJECT_DIR$/src/polyfills.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/associated-select/associated-select.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/associated-select/associated-select.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/associated-input/associated-input.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/associated-input/associated-input.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/audit-plan-drug-category/audit-plan-drug-category.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-351">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/audit-plan-dept/audit-plan-dept.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="41" lean-forward="false" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+<<<<<<< Updated upstream
+=======
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/audit-plan-doctor/audit-plan-doctor.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+<<<<<<< Updated upstream
+=======
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/audit-setting/audit-setting.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/common/bundles/common.umd.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1687" column="45" lean-forward="false" selection-start-line="1687" selection-start-column="45" selection-end-line="1687" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/audit-setting/audit-setting.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="35" column="5" lean-forward="false" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/zone-dept/zone-dept-wrap/zone-dept-wrap.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/src/facade/async.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/zone-dept/zone-dept-wrap/zone-dept-wrap.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+<<<<<<< Updated upstream
+=======
+          <folding>
+            <element signature="e#0#103#0" expanded="false" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/select-comp/select.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+<<<<<<< Updated upstream
+=======
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#140#211#0" expanded="false" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-order-audit.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1458">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< Updated upstream
+=======
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
+          </folding>
+>>>>>>> Stashed changes
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/audit-setting/audit-setting.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/audit-setting/audit-setting.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/menu.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342">
+          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="32" column="7" lean-forward="false" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="38" column="14" lean-forward="false" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="42" column="71" lean-forward="false" selection-start-line="42" selection-start-column="71" selection-end-line="42" selection-end-column="71" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/ipt-order-audit.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/app/page/common/laboratory-sheet/laboratory-sheet.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414">
+          <caret line="28" column="20" lean-forward="true" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< Updated upstream
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-829">
+          <caret line="32" column="15" lean-forward="true" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="15" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-audit-plan-choose.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.routes.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="26" column="97" lean-forward="true" selection-start-line="26" selection-start-column="97" selection-end-line="26" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/popup-add.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1188">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-review/opt-recipe-review-details.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="26" column="103" lean-forward="true" selection-start-line="26" selection-start-column="103" selection-end-line="26" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/common/popup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="102" column="31" lean-forward="true" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/alert-message/list/alert-message.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-map.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="47" lean-forward="true" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/images/antibacterialsflag-all.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-43">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/images/antibacterialsflag-part.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/platform-browser/bundles/platform-browser.umd.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="21" column="9422" lean-forward="false" selection-start-line="21" selection-start-column="9422" selection-end-line="21" selection-end-column="9422" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/compiler/src/style_compiler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/alert-message/alert-message-details.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/alert-message/alert-message-details.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/menu.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-74">
+          <caret line="31" column="60" lean-forward="false" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/page/ipt-opt-auditing/opt-recipe-details.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="56" column="41" lean-forward="true" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+>>>>>>> Stashed changes
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

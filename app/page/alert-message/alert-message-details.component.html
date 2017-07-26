@@ -1,0 +1,159 @@
+<div class="flex column fillspace-sm">
+    <div class="search-form">
+        <div style="border-bottom: 1px solid #eee;margin-bottom: 10px;">
+            <a class="basic-back-btn icon-arrow-back" (click)="backToList()"><span>返回</span></a>
+        </div>
+        <div class="flex search-form-con">
+            <div class="flex1 form-inline" style="align-items: flex-start;">
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">药品名称：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{msg.drugId}}
+                            <button type="button" class="btn btn-primary btn-sm" (click)="window.open(ruleUrl)">查看规则</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">分析类型：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{msg.analysisType}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">提示类型：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{msg.analysisResultType}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">警示等级：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{msg.severity}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">建议：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{msg.advice}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">警示内容：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{msg.message}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">警示状态：</label>
+                    <div>
+                        <div class="search-form-text">
+                            {{statusStr}}
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-3 form-group search-form-list">
+                    <label class="f-i-label">申请状态：</label>
+                    <div *ngIf="status == 0" class="search-form-text">
+                        <span *ngIf="msg.applyStatus == 0 || msg.applyStatus == null">
+                            <button type="button" class="btn btn-sm btn-primary" (click)="alertMssageStatus(1)">申请确认</button>
+                            <button type="button" class="btn btn-sm btn-primary" (click)="alertMssageStatus(2)">申请待查</button>
+                        </span>
+                        <span *ngIf="msg.applyStatus == 1">
+                            <span>已申请确认</span>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="alertMssageStatus(2)">申请待查</button>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="describe()">描述</button>
+                        </span>
+                        <span *ngIf="msg.applyStatus == 2">
+                            <span>已申请待查</span>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="alertMssageStatus(1)">申请确认</button>
+                        <button type="button" class="btn btn-sm btn-primary" (click)="describe()">描述</button>
+                        </span>
+                    </div>
+                    <span *ngIf="status == 1">
+                        <span *ngIf="msg.applyStatus == 0 || msg.applyStatus == null">
+                            <button type="button" class="btn-primary" (click)="alertMssageStatus(2)">申请待查</button>
+                        </span>
+                    <span *ngIf="msg.applyStatus == 2">
+                            <span>已申请待查</span>
+                    <button type="button" class="btn-primary" (click)="describe()">描述</button>
+                    </span>
+                    <span *ngIf="msg.applyStatus == 1">
+                            <span>已申请确认</span>
+                    <button type="button" class="btn-primary" (click)="alertMssageStatus(2)">申请待查</button>
+                    </span>
+                    </span>
+                    <span *ngIf="status == 2">
+                        <span *ngIf="msg.applyStatus == 0 || msg.applyStatus == null">
+                            <button type="button" class="btn-primary" (click)="alertMssageStatus(1)">申请确认</button>
+                        </span>
+                    <span *ngIf="msg.applyStatus == 2">
+                            <span>已申请待查</span>
+                    <button type="button" class="btn-primary" (click)="alertMssageStatus(1)">申请确认</button>
+                    </span>
+                    <span *ngIf="msg.applyStatus == 1">
+                            <span>已申请确认</span>
+                    <button type="button" class="btn-primary" (click)="describe()">描述</button>
+                    </span>
+                    </span>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="flex1 flex column">
+        <table class="table alert-message-details-th">
+            <thead>
+                <tr style="height: 45px;">
+                    <th width="27%">医院名称</th>
+                    <th width="27%">{{param.auditObject == 1 ? '处方号' : '患者号'}}</th>
+                    <th width="27%">{{param.auditObject == 1 ? '处方' : (param.auditObject == 2 ? '就诊' : '医嘱')}}日期</th>
+                    <th>查看</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="flex1" style="overflow-y: scroll;margin-right: -7px;">
+            <table class="table" style="margin: 0">
+                <tbody>
+                    <tr *ngFor="let trow of msgList;let i = index" (mouseover)="touchedTrow = trow" [class.even-tr]="i%2 === 1">
+                        <td width="27%">{{trow.zoneName}}</td>
+                        <td width="27%">{{param.auditObject == 1 ? trow.recipeId : trow.patientId}}</td>
+                        <td width="27%">{{param.auditObject == 3 ? (trow.orderDate | date:"yyyy-MM-dd HH:mm:ss") : (trow.recipeTime | date:"yyyy-MM-dd HH:mm:ss")}}</td>
+                        <td>
+                            <span class="alert-message-details-check icon-check" (click)="goRecipeDetail(trow)" #review (mouseover)="showTips($event, review)" (mouseout)="review.show = false">
+                                <mouse-tips [title]="'查看'" [isFixed]='true' [posInfo]='posInfo' *ngIf="trow == touchedTrow && review.show"></mouse-tips>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <pagination [pageInfo]="pageInfo" (changePage)="setPage($event)" (changePageSize)="setPageSize($event)"></pagination>
+    </div>
+</div>
+<!--弹窗表格-->
+<div class="popup-add" id="popupAdd" *ngIf="!isDescribe">
+    <div class="popup-add-doctor flex column" id="popupDoctor">
+        <div class="popup-add-header">
+            <div class="col-6">申请描述</div>
+            <div class="col-6 text-right"><img src="../../images/close.svg" alt="关闭" (click)="isDescribe = true"></div>
+        </div>
+        <div class="popup-add-body flex1 flex">
+            <textarea class="col-12" style="width:100%; height:90%; border: 1px solid;" #textarea placeholder="请填写描述">{{msg.remark}}</textarea>
+        </div>
+        <div class="popup-add-footer">
+            <button type="button" class="btn btn-sm" (click)="isDescribe = true">取消</button>
+            <button type="button" class="btn btn-sm btn-primary" (click)="saveDescribe(textarea.value)">保存</button>
+        </div>
+    </div>
+</div>
+<prompt-component></prompt-component>

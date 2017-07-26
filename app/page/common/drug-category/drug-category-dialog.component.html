@@ -1,0 +1,42 @@
+<div class="popup-add" *ngIf="showDialog">
+    <div class="popup-add-doctor flex column">
+        <div class="popup-add-header">
+            选择药品分类
+            <img class="popup-add-close" src="../../../images/close.svg" alt="关闭" (click)="cancel()">
+        </div>
+        <div class="popup-add-body flex1 flex">
+            <div class="flex1 flex column" style="padding: 10px;">
+                <div class="add-program-header" style="margin-bottom: 10px;">选择名称</div>
+                <div class="popup-add-body-left flex1 flex column">
+                    <div class="input-group" style="margin-bottom: 10px;min-height: 30px;">
+                        <div class="input-group-addon icon-search"></div>
+                        <input type="text" class="form-control form-control-sm" placeholder="请输入关键字" [(ngModel)]="searchDrugText">
+                    </div>
+                    <!--<button type="submit" class="btn btn-sm btn-primary ml-2" (click)="searchDrugName = searchDrugText">搜索</button>-->
+                    <div class="flex1">
+                        <div class="text-left popup-add-margin">
+                            <drug-category-tree #tree [keyword]="searchDrugText" [options]="options" (onActivate)="chooseDrugs($event)"></drug-category-tree>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="multitree-container flex1" *ngIf="options.mutipleChoose">-->
+            <div class="flex1 flex column" style="padding: 10px;">
+                <div class="add-program-header" style="margin-bottom: 10px;">已经选择</div>
+                <div class="popup-add-body-right flex1">
+                    <div *ngFor="let item of choosedDrugs;let i = index" (click)="choosedDrugs.splice(i, 1);">
+                        <input type="checkbox" checked>{{item.name ? item.name : item.dbdName}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+        <!--<div style="max-height:380px;overflow:auto;" *ngIf="!options.mutipleChoose">
+            <drug-category-tree #tree [keyword]="searchDrugName" [options]="options" (onActivate)="chooseDrugs($event)"></drug-category-tree>
+        </div>-->
+        <div class="popup-add-footer">
+            <button class="btn btn-sm btn-secondary" (click)="cancel()">取消</button>
+            <button class="btn btn-sm btn-primary ml-3" (click)="submit()">提交</button>
+        </div>
+    </div>
+</div>

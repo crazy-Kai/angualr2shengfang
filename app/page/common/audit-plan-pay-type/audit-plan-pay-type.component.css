@@ -1,0 +1,52 @@
+.audit-plan-list {
+    position: relative;
+}
+
+.audit-plan-list>label {
+    height: 30px;
+}
+
+.audit-plan-pay-select {
+    width: 280px;
+    display: inline-block;
+    min-height: 30px;
+    max-height: 90px;
+    border: 1px solid #DFDFDF;
+    background: #fff;
+    overflow: auto;
+}
+
+.audit-plan-pay-name {
+    display: inline-block;
+    height: 24px;
+    padding: 2px 5px;
+    margin: 2px;
+    background-color: #F5F5F5;
+    margin-right: 10px;
+}
+
+.audit-plan-X {
+    display: inline-block;
+    font-size: 12px;
+    color: #CACACA;
+    cursor: pointer;
+}
+
+.audit-plan-X:hover{
+    color: #000;
+}
+
+/*弹窗*/
+.popup-add-choice{
+    position: absolute;left: 130px;top: 30px;
+    padding: 10px 0;
+    width: 280px;max-height: 350px;overflow:auto;
+    z-index: 1000;
+}
+.popup-add-choice li{
+    padding: 0 10px;
+    line-height: 30px;
+}
+.popup-add-choice li:hover{
+    background: #AAFFEE;
+}

@@ -1,0 +1,80 @@
+<div class="column" [class.fixedContainer]="isFixedHeader">
+    <table class="table-struc" *ngIf="isFixedHeader">
+        <thead>
+            <tr class="table-head">
+                <th *ngFor="let item of table.title" cell [ngSwitch]="item.type" [width]="item.width">
+                    <span *ngSwitchCase="'checkbox'"><input type="checkbox" (click)="checkBoxes(checkbox.checked)" #checkbox [checked]='isAllChecked()'></span>
+                    <span *ngSwitchDefault>{{item.name}}</span>
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <div [class.flex1]="isFixedHeader" [class.hide-scroll]="isFixedHeader">
+        <table class="table table-struc">
+            <thead *ngIf="!isFixedHeader">
+                <tr class="table-head">
+                    <th *ngFor="let item of table.title" cell [ngSwitch]="item.type" [width]="item.width">
+                        <span *ngSwitchCase="'checkbox'"><input type="checkbox" (click)="checkBoxes(checkbox.checked)" #checkbox [checked]='isAllChecked()'></span>
+                        <span *ngSwitchDefault>{{item.name}}</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody *ngIf="!tableTemplate">
+                <tr [hidden]="tableTemplate" class="table-body" *ngFor="let trow of table.dataList;let line = index" [class.focus]='isFocus(trow) && !hasCheckboxInTable()'
+                    [class.checked]='isChecked(trow)' (click)="onRowClick(trow)" (dblclick)="onRowDblClick(trow)">
+                    <td [width]="item.width" *ngFor="let item of table.title;let i = index" [ngSwitch]="item.type">
+                        <span *ngSwitchCase="'text'">{{trow[item.id]}}</span>
+                        <span *ngSwitchCase="'index'">{{line + 1 + (table.currentPage - 1) * table.pageSize}}</span>
+                        <span *ngSwitchCase="'date'" class="date">{{trow[item.id]|date:"yyyy-MM-dd HH:mm:ss"}}</span>
+                        <span *ngSwitchCase="'dateY'" class="date">{{trow[item.id]|date:"yyyy-MM-dd"}}</span>
+                        <span *ngSwitchCase="'checkbox'"><input type="checkbox" #checkItem [checked]="isChecked(trow)"></span>
+                        <span *ngSwitchCase="'object'">{{item.object[trow[item.id]]?item.object[trow[item.id]]:item.object.default}}</span>
+                        <span *ngSwitchDefault>{{trow[item.id]}}</span>
+                    </td>
+                </tr>
+                <tr *ngIf="!table.dataList || table.dataList.length <= 0">
+                    <td colspan="100">没有找到相关数据</td>
+                </tr>
+            </tbody>
+            <my-tbody *ngIf="tableTemplate" [tableinfo]="table" [tableTemplate]="tableTemplate"></my-tbody>
+        </table>
+    </div>
+    <div id="pageBreak">
+        <span class="form-inline" style="float:left;">
+            显示
+            <!--<input type="number" class="input-page" [(ngModel)]="table.pageSize" (ngModelChange)="onChangePageSize()" *ngIf="!table.disInput" readonly>-->
+            <select class="form-control form-control-sm page-select" [(ngModel)]="table.pageSize" (ngModelChange)="onChangePageSize()" style="margin: 0 5px;">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+            </select>
+            条
+            <span *ngIf="table.itemCountPath" style="margin-left: 10px;">共<span style="color: #4EB7E0">{{table.totalCount}}</span>条</span>
+        </span>
+        <!--<span *ngIf="table.pageCountPath">共 {{table.totalPageCount}} 页</span>-->
+        <div style="float: right;">
+            <button class="btn btn-secondary btn-sm page-btn" (click)="turnToHomePage()">首页</button>
+            <button class="btn btn-secondary btn-sm page-btn" [disabled]="table.currentPage == 1" (click)="prePage()">上一页</button>
+
+            <span *ngIf="table.currentPage - 3 > 0 ">...</span>
+            <button *ngIf="table.currentPage - 2 > 0" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(table.currentPage - 2)">{{table.currentPage - 2}}</button>
+            <button *ngIf="table.currentPage - 1 > 0" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(table.currentPage - 1)">{{table.currentPage - 1}}</button>
+            <button class="btn btn-secondary btn-sm page-btn" style="background: #4EB7E0;color: #fff;">{{table.currentPage}}</button>
+            <button *ngIf="table.totalPageCount - table.currentPage > 0" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(table.currentPage + 1)">{{table.currentPage + 1}}</button>
+            <button *ngIf="table.totalPageCount - table.currentPage > 1" class="btn btn-secondary btn-sm page-btn" (click)="specificPage(table.currentPage + 2)">{{table.currentPage + 2}}</button>
+            <span *ngIf="table.totalPageCount - table.currentPage > 2">...</span>
+
+            <button class="btn btn-secondary btn-sm page-btn" [disabled]="table.currentPage >= table.totalPageCount" (click)="nextPage()">下一页</button>
+            <button class="btn btn-secondary btn-sm page-btn" (click)="turnToEndPage()">尾页</button>
+            <span style="margin: 0 10px 0 30px;">
+                跳至
+                <input type="number" class="blink-page-ipt form-control-sm" [(ngModel)]="blinkPage" (keyup.enter)="specificPage()">
+                页
+            </span>
+            <button class="btn btn-secondary btn-sm page-btn" (click)="specificPage()">跳转</button>
+        </div>
+    </div>
+</div>
+<my-dialog></my-dialog>

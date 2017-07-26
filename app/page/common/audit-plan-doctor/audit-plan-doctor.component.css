@@ -1,0 +1,77 @@
+.audit-plan-list {
+    position: relative;
+}
+
+.audit-plan-list>label {
+    height: 30px;
+    line-height: 30px;
+}
+
+.add-program-header {
+    height: 30px;
+    line-height: 30px;
+}
+
+.audit-plan-doc-select {
+    display: inline-block;
+    max-width: 280px;
+    max-height: 90px;
+    padding: 3px 0;
+    margin-right: 10px;
+    background-color: #fff;
+    overflow: auto;
+}
+
+.audit-plan-doc-name {
+    display: inline-block;
+    height: 24px;
+    padding: 2px 5px 3px;
+    margin-bottom: 3px;
+    background-color: #F5F5F5;
+    margin-right: 10px;
+}
+
+.audit-plan-X {
+    display: inline-block;
+    font-size: 12px;
+    color: #CACACA;
+    cursor: pointer;
+}
+
+.audit-plan-X:hover{
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.add-program-checked-select {
+    width: 280px;
+    height: 30px;
+}
+
+.add-program-checked-select>span {
+    display: inline-block;
+    border: 1px solid #999999;
+    padding: 0px 5px;
+}

@@ -1,0 +1,155 @@
+/*项目列表和项目详情*/
+.search-header{
+    margin-top: 15px;
+}
+.ipt-sm {
+    width: 180px;
+    height: 30px!important;
+    font-size: 12px;
+    border: 1px solid #DFDFDF;
+    padding-left: 10px;
+    vertical-align: middle;
+}
+.header-bar{
+    margin:0 -20px;
+    border-bottom: 1px solid #ddd;
+}
+.header-bar .check-return{
+
+}
+
+#review-pro-table{
+
+}
+#review-pro-table table{
+    border: none;
+}
+#review-pro-table th{
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#review-pro-table td{
+    padding: 7px;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+#review-pro-table tr:hover{
+    background: #f0f0f0;
+}
+#review-pro-table .odd{
+    background: #fcfcfc;
+}
+.progress-bar{
+    display: inline-block;
+    width: 100px;
+    height: 10px;
+    background: #eee;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.progress-bar span{
+    float:left;
+    display: inline-block;
+    height: 10px;
+    background: #5D9CEC;
+    overflow: hidden;
+}
+.progress-rate{
+    display: inline-block;
+    width:40px;
+    text-align: left;
+}
+
+.search-header .form-group{
+    margin-bottom: 10px;
+}
+.search-header .form-group label{
+    margin-right: 10px;
+}
+.search-header .form-group input[type='radio']{
+    margin-right: 5px;
+}
+#project-table{
+    border-top: 7px solid #eee;
+    padding-top: 10px;
+}
+.project-infos{
+    margin-bottom: 10px;
+}
+.project-infos span{
+    margin-right: 20px;
+    line-height: 30px;
+}
+
+.btns {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #5D9CEC;
+    vertical-align: middle;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+}
+table .btn-intab-del{
+    color: #f00;
+}
+table .btn-disabled{
+    cursor: not-allowed;
+    color: #ccc;
+}
+.icon-sheet{
+    margin: 0 6px;
+    width: 16px;height: 16px;
+    background: url('./app/images/sheetunlocked.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+.icon-sheet.btn-disabled{
+    background: url('./app/images/sheetlocked.png') center center no-repeat;
+    background-size: 100% 100%;
+}
+/*弹窗*/
+.wrapper{
+    position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 1001;
+    background: rgba(0, 0, 0, .5);
+}
+.save-pro{
+    position: fixed;left: 50%;top: 50%;z-index: 1002;
+    transform: translate(-50%, -50%);
+    width: 350px;overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+}
+.save-pro .w-ipt{
+    min-height: 130px;overflow: hidden;
+    text-align: center;
+}
+.save-pro .w-ipt .title{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.save-pro .w-ipt .pro-ipt{
+    margin-top: 30px;margin-bottom: 10px;
+}
+.save-pro .w-ipt .pro-ipt > div{
+    padding: 0;
+}
+.save-pro .pro-name-model{
+    display: inline-block;
+    text-align: left;
+}
+.save-pro .pro-name-model .ipt-warning{
+    display: inline-block;width: 220px;
+    color: #f00;
+}
+.save-pro .w-btns{
+    padding-top: 10px;
+    height: 50px;text-align: center;
+    border-top: 1px solid #eee;
+}
+.save-pro .w-btns button{
+    margin: 0 5px;
+}

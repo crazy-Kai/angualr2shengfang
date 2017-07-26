@@ -1,0 +1,5 @@
+/node_modules/
+java/.idea/workspace.xml doc/*.tmp *.xml
+/app/page/**/*.js
+/app/page/**/*.map
+/dist/

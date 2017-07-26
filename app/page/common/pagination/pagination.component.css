@@ -1,0 +1,48 @@
+#pageBreak{
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+#pageBreak:after{
+    content: ' ';display: block;visibility: hidden;clear: both;
+}
+
+#pageBreak .blink-page-ipt{
+    width: 45px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #444;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #DFDFDF;
+    padding: 5px 10px;
+    margin: 0 7px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0;
+}
+
+#pageBreak .btn-secondary:focus{
+    background-color: #fff;
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+}
+
+#pageBreak .page-btn {
+    border-radius: 0;
+    border: 1px solid #DFDFDF;
+    min-width: 34px;
+    height: 34px;
+    color: #444;
+    font-size: 13px;
+}
+
+#pageBreak select.page-select {
+    min-width: 80px;
+    height: 34px;
+    color: #444;
+    font-size: 13px;
+    border: 1px solid #DFDFDF;
+    border-radius: 0;
+}

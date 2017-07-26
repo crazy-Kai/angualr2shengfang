@@ -1,0 +1,57 @@
+<div class="form-group form-inline">
+    <label class="f-i-label">药品分类：</label>
+    <div class="add-program-checked-select" *ngFor="let drugCategoryResult of drugCategoryResultList">
+        <span class="add-program-header">
+            {{drugCategoryResult}}
+            <span class="add-program-checked" (click)="drugCategoryResultDelete(drugCategoryResult)">×</span>
+        </span>
+    </div>
+    <button type="button" id="openDrug" class="btn btn-primary add-program-add-btn btn-sm" (click)="isPopupShow=!isPopupShow">选择</button>
+</div>
+<div class="popup-add" id="popupAdd" *ngIf="isPopupShow">
+    <div class="popup-add-doctor flex column" id="popupDrug">
+        <div class="popup-add-header">选择药品</div>
+        <div class="popup-add-body flex1 flex">
+            <div class="flex1 flex column" style="padding: 10px;">
+                <div class="add-program-header" style="margin-bottom: 10px;">选择名称</div>
+                <div class="popup-add-body-left flex1 flex column">
+                    <div class="input-group" style="margin-bottom: 10px;">
+                        <div class="input-group-addon icon-search"></div>
+                        <input type="text" class="form-control form-control-sm" id="inlineFormInputGroup" placeholder="请输入名称或代码" #drugSearchBox (keyup)="searchDrugCategory(drugSearchBox.value)">
+                    </div>
+                    <div class="flex1">
+                        <div class="text-left clear-both">
+                            <input type="checkbox" name="type" value="全选" (click)="drugCategoryClick()" [checked]="isAllChecked">
+                            全选
+                        </div>
+                        <!--<<div class="text-left popup-add-margin" *ngFor="let drugCategory of drugCategoryList">
+                            <input type="checkbox" name="type" (click)="drugCategoryClick(drugCategory)" [checked]="drugCategory.checked">
+                            {{drugCategory.name}}
+                        </div>-->
+                        <Tree [nodes]="drugCategoryList">
+                            <template #treeNodeTemplate let-node>
+                                <input type="checkbox" name="type" [checked]="node.data.checked" (click)="drugCategoryClick(node)">
+                                {{ node.data.name }}
+                            </template>
+                        </Tree>
+                    </div>
+                </div>
+            </div>
+            <div class="flex1 flex column" style="padding: 10px;">
+                <div class="add-program-header">已经选择</div>
+                <div class="flex1 popup-add-body-right">
+                    <div *ngFor="let drugCategoryChoose of drugCategoryChooseList">
+                        <div>
+                            {{drugCategoryChoose}}
+                            <span class="" (click)="drugCategoryDelete(drugCategoryChoose)"><img src="../../../images/close-1.svg" alt="关闭"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-add-footer">
+            <button type="button" id="closeDrug1" class="btn btn-secondary add-program-add-btn btn-sm" (click)="canclePopup()">取消</button>
+            <button type="button" id="closeDrug2" class="btn btn-primary add-program-add-btn btn-sm" (click)="submitPopup()">确定</button>
+        </div>
+    </div>
+</div>

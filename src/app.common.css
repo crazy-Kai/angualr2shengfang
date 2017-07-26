@@ -1,0 +1,333 @@
+
+.flex{
+    display:-webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display:-moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display:-ms-flexbox;      /* TWEENER - IE 10 */
+    display:-webkit-flex;     /* NEW - Chrome */
+    display:flex; 
+}
+.column{
+    -webkit-box-orient:vertical;    /* OLD */
+    -moz-box-orient:vertical;       /* OLD */
+    -ms-box-orient:vertical;        /* OLD */
+    -webkit-flex-flow:column;
+    -moz-flex-flow:column;
+    -ms-flex-flow:column;
+    flex-flow:column;
+}
+.flex1 {
+    -webkit-box-flex:1;
+    -moz-box-flex:1;
+    -webkit-flex:1 1 0;
+    flex:1 1 0;
+}
+.fillspace {
+    position: absolute;left: 0;top: 0;right: 0;bottom: 0;
+}
+.fillspace-sm {
+    position: absolute;top: 20px;right: 20px;bottom: 20px;left: 20px;
+    background-color: #fff;
+    padding: 0 20px;
+    color: #515253;
+}
+/**common styles**/
+body, button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
+    font-family: Arial,"Lucida Grande",Verdana,"Microsoft YaHei",hei;
+    /*font-family: '微软雅黑','Microsoft YaHei';*/
+}
+ol, ul, li {
+    list-style: none;
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0; 
+	border: none; 
+	outline: 0; 
+	font-size: 100%; 
+	font: inherit;
+	vertical-align: baseline;
+}
+textarea{vertical-align: top;}
+a{
+    color:#535353;
+    text-align: left;
+    cursor: pointer;
+}
+.fl{float: left;}
+.fr{float: right;}
+/*通用间距*/
+.mt5{margin-top: 5px;}
+.mr5{margin-right: 5px;}
+.mb5{margin-bottom: 5px;}
+.ml5{margin-left: 5px;}
+.pt5{padding-top: 5px;}
+.pr5{padding-right: 5px;}
+.pb5{padding-bottom: 5px;}
+.pl5{padding-left: 5px;}
+
+.mt10{margin-top: 10px;}
+.mr10{margin-right: 10px;}
+.mb10{margin-bottom: 10px;}
+.ml10{margin-left: 10px;}
+.pt10{padding-top: 10px;}
+.pr10{padding-right: 10px;}
+.pb10{padding-bottom: 10px;}
+.pl10{padding-left: 10px;}
+
+.mt15{margin-top: 15px;}
+.mr15{margin-right: 15px;}
+.mb15{margin-bottom: 15px;}
+.ml15{margin-left: 15px;}
+.pt15{padding-top: 15px;}
+.pr15{padding-right: 15px;}
+.pb15{padding-bottom: 15px;}
+.pl15{padding-left: 15px;}
+/*通用间距结束*/
+table{
+    border-collapse:collapse;
+    width: 100%;background: #fff;
+    margin: 0;
+}
+table th{
+    max-height: 58px;
+    background: #f9f9f9;
+}
+table, td, th{
+    word-break:break-all;word-wrap:break-word;
+    border:1px solid #dfdfdf;
+}
+.table td {
+  padding: 10px 10px 11px;
+  vertical-align: middle;
+  border-top: 1px solid #eceeef;
+}
+
+td, th{
+    padding: 5px;
+    text-align: center;
+    line-height: 1.42857143;
+}
+th {
+    height: 45px;
+    background: #F9F9F9;
+    font-weight: 500;
+}
+.table-body td {
+    font-weight: 500;
+    vertical-align: middle;
+}
+.even-tr {
+    background: #FDFDFE;
+}
+
+.table-struc tr.selected, .table-struc tr.checked,
+.table-struc tr.selected, .table-struc tr.focus {
+    background: #e3f2ff;
+}
+.table-struc tr:hover{
+    background: #e3f2ff;
+    cursor: pointer;
+}
+my-tbody, tbody{
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+table .time-wrap{white-space: nowrap;}
+
+table .btn-intab{
+    padding: 3px;
+    background: transparent;
+    color: #61BBE2;
+}
+table .btn-intab-del{
+    color: #f00;
+}
+table .btn-disabled{
+    color: #ccc;
+}
+/*bootstrap hotfix start*/
+.form-inline label {
+    -webkit-box-pack: flex-end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: flex-end;
+            justify-content: flex-end;
+    margin-bottom: 0;
+}
+label.hand{
+    cursor: pointer;
+}
+.btn {
+    cursor: pointer;
+}
+/*btn-sm*/
+.btn-sm, .btn-group-sm > .btn {
+    min-width: 60px;
+    padding: 0.40625rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 0.2rem;
+}
+/*btn-primary*/
+.btn-primary, .btn-primary:hover, .btn-primary:active{
+    background-color: #68C4EC;
+    border-color: #61BBE2;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #61BBE2;
+    border-color: #61BBE2;
+}
+.btn-add {
+    color: #558593;
+    background-color: #EEFAFF;
+    border-color: #A1DDF4;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #fff;
+    background-color: #68C4EC;
+    border-color: #61BBE2;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #68C4EC;
+    border-color: #61BBE2;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #68C4EC;
+    border-color: #61BBE2;
+}
+.btn-primary:active:hover,
+.btn-primary.active:hover,
+.open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.open > .dropdown-toggle.btn-primary:focus,
+.btn-primary:active.focus,
+.btn-primary.active.focus,
+.open > .dropdown-toggle.btn-primary.focus {
+    color: #fff;
+    background-color: #68C4EC;
+    border-color: #61BBE2;
+}
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    background-color: #68C4EC;
+    border-color: #61BBE2;
+}
+.btn-primary .badge {
+    color: #61BBE2;
+    background-color: #fff;
+}
+/*bootstrap hotfix end*/
+/*特殊的input样式*/
+.input-short{width: 100px!important;}
+
+.input-group-addon {
+    font-size: 0.875rem;
+}
+
+input[type='radio']{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #DFDFDF;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+}
+input[type='checkbox']{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #DFDFDF;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    outline: none;
+    vertical-align: middle;
+}
+input[type='radio']:checked {
+    border: 5px solid #55AA35;
+}
+input[type='checkbox']:disabled {
+    background: #eee;
+    opacity: .66;
+}
+input[type='checkbox']:checked {
+    background: #61BBE2 url("../app/images/white-tick.svg") center center no-repeat;
+    background-size: 90% 90%;
+    border: 1px solid #61BBE2;
+}
+
+.middle {
+    vertical-align: middle;
+}
+.red {
+    color: red;
+}
+
+
+/*chrome浏览器滚动条样式*/
+::-webkit-scrollbar   {
+    width: 7px; 
+    border-radius: 5px;
+    background-color: #ccc;  
+}
+
+::-webkit-scrollbar-thumb { 
+    border-radius: 5px;
+    background-color: #666;  
+}
+
+.tree-node {
+    position: relative;
+}
+
+.tree-node .toggle-children-wrapper, .tree-node .toggle-children-placeholder {
+    position: absolute;
+    left: 0px;
+    top: -3px;
+}
+
+.tree-node .node-content-wrapper {
+    margin-left: 12px;
+}
+/*全局返回按钮*/
+.basic-back-btn{
+    display: inline-block!important;
+    padding: 5px 10px!important;
+    color: #515253!important;
+    font-size: 13px;line-height: 25px!important;
+}
+.basic-back-btn span{
+    padding-left: 5px!important;
+}

@@ -1,0 +1,17 @@
+<div class="form-group form-inline audit-plan-list" style="position: relative;" (click)="stopPropagation($event)">
+    <label class="f-i-label">药品属性：</label>
+    <div class="audit-plan-property-select" (click)="selectClick($event.target)">
+        <span class="audit-plan-property-name" *ngFor="let resultType of drugPropertyResult">
+            {{resultType.name}}
+            <span class="audit-plan-X" (click)="deleteDrugProperty($event, resultType.id)">X</span>
+        </span>
+    </div>
+    <div class="popup-add-choice flex column" *ngIf="isPopupShow">
+        <Tree [nodes]="drugPropertyList" [options]="options">
+            <template #treeNodeTemplate let-node>
+                <input type="checkbox" name="type" [checked]="node.data.checked" (click)="chooseDrugPropertyItem(node.data,$event)">
+                {{ node.data.name }}
+            </template>
+        </Tree>
+    </div>
+</div>

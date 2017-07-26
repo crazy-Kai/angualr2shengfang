@@ -1,0 +1,140 @@
+<div class="flex column fillspace-sm">
+    <div class="search-form">
+        <div class="flex search-form-con">
+            <div class="flex1 form-inline">
+                <div class="col-6 form-group">
+                    <label>日期：</label>
+                    <time-interval [startTime]="searchParams.startTime" [endTime]="searchParams.endTime" (timeSetted)="updateSearchTime($event)"></time-interval>
+                </div>
+                <div class="col-3 form-group">
+                    <label>科室：</label>
+                    <div class="search-form-dept" (click)="deptclick($event)" #deptComp>
+                        <span *ngFor="let _zone of deptList">
+                            <span *ngIf="!_zone.checked">
+                                <span class="audit-plan-dept-name" *ngFor="let dept of trans2Arr(_zone&&_zone.idNamePairs || {})">
+                                    {{dept.name}}
+                                    <span class="audit-plan-X" (click)="fnZoneDeptDelete('dept',dept, $event)">X</span>
+                        </span>
+                        </span>
+                        <span class="audit-plan-dept-name" *ngIf="_zone.checked">
+                                {{_zone.zoneName}}
+                                <span class="audit-plan-X" (click)="fnZoneDeptDelete('zone',_zone, $event)">X</span>
+                        </span>
+                        </span>
+                        <zone-dept-wrap-component [options]="deptOptions" [relydom]="deptComp" [deptList]="deptList" (output)="fnDeptSelect($event)"></zone-dept-wrap-component>
+                    </div>
+                </div>
+                <div class="col-3 form-group">
+                    <label>医生：</label>
+                    <!--<auto-complete [option]="doctorOption" (select)="doctorSelect($event)"></auto-complete>-->
+                    <input type="text" class="form-control form-control-sm" method="getDoctorList" placeholder="请输入医生名称" [(ngModel)]="searchParams.doctorName" (onChoosed)="doctorSelect($event)" [autocomplete]>
+                </div>
+                <div class="col-3 form-group">
+                    <label>药品分类：</label>
+                    <input type="text" [(ngModel)]="drugClassifyName" (click)="chooseDrug()" readonly>
+                </div>
+                <div class="col-3 form-group">
+                    <label>药品名称：</label>
+                    <!--<auto-complete [option]="drugOption" (select)="drugNameSelect($event)"></auto-complete>-->
+                    <input type="text" class="form-control form-control-sm" method="getProductList" placeholder="请输入药品名称" (onChoosed)="drugNameSelect($event)" [(ngModel)]="searchParams.productName" [autocomplete]>
+                </div>
+                <div class="col-3 form-group">
+                    <label>抗菌药物：</label>
+                    <select [(ngModel)]="searchParams.antibacterialsFlag">
+                        <option value=""> </option>
+                        <option value="0">否</option>
+                        <option value="3">是</option>
+                        <option value="1">全身</option>
+                        <option value="2">局部</option>
+                    </select>
+                </div>
+                <div class="col-3 form-group">
+                    <label>注射药物：</label>
+                    <select class="" [(ngModel)]="searchParams.injectableFlag">
+                        <option value=""></option>
+                        <option value="1">是</option>
+                        <option value="0">否</option>
+                    </select>
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>处方号：</label>
+                    <input type="text" name="searchParams.recipeNo" [(ngModel)]="searchParams.recipeNo">
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>患者号：</label>
+                    <input type="text" name="searchParams.patientId" [(ngModel)]="searchParams.patientId">
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>审方药师：</label>
+                    <select [(ngModel)]="searchParams.auditDocId">
+                        <option value=""> </option>
+                        <option *ngFor="let auditDoctor of auditDoctorList" [value]="auditDoctor.id">{{auditDoctor.name}}</option>
+                    </select>
+                </div>
+                <div class="col-3 form-group" *ngIf="fullMode">
+                    <label>处方状态：</label>
+                    <select [(ngModel)]="searchParams.recipeStatus">
+                        <option value=""></option>
+                        <option value="0">审核打回</option>
+                        <option value="1">审核通过</option>
+                        <option value="2">超时通过</option>
+                        <option value="3">自动通过</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button class="btn search-form-btn" (click)="search()">搜索</button>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a (click)="fullMode = !fullMode">{{fullMode ? '收起' : '展开'}}筛选条件<img src="../../images/arrows-down.svg" class="tips-arrow" [class.uparrow]="fullMode"/></a>
+        </div>
+    </div>
+    <div class="flex1" style="position: relative;">
+        <my-table [table]="recipeListTable" [isFixedHeader]="true" [notInit]="true" (emitPagination)="getPagination($event)">
+            <template #tableTemplate let-tableinfo>
+                <tr *ngFor="let trow of tableinfo.dataList;let i = index;" (mouseover)="touchedTrow = trow" [class.even-tr]="i%2 === 1" (dblclick)="goReview(trow)">
+                    <td width="5%" align="center">
+                        <div style="display: inline-block;position: relative;" *ngIf="trow.antibacterialsFlag == 1 || trow.antibacterialsFlag == 3"
+                            #antiAll>
+                            <mouse-tips [title]="'全身抗菌用药'" [isFixed]='true' [posInfo]='posInfo' *ngIf="trow == touchedTrow && antiAll.show"></mouse-tips>
+                            <img src="../../images/antibacterialsflag-all.svg" (mouseover)="showTips($event, antiAll)" (mouseout)="antiAll.show = false">
+                            <!--全身抗菌用药-->
+                        </div>
+                        <div style="display: inline-block;position: relative;" *ngIf="trow.antibacterialsFlag == 2 || trow.antibacterialsFlag == 3"
+                            #antiPart>
+                            <mouse-tips [title]="'局部抗菌用药'" [isFixed]='true' [posInfo]='posInfo' *ngIf="trow == touchedTrow && antiPart.show"></mouse-tips>
+                            <img src="../../images/antibacterialsflag-part.svg" (mouseover)="showTips($event, antiPart)" (mouseout)="antiPart.show = false">
+                            <!--局部抗菌用药-->
+                        </div>
+                        <div style="display: inline-block;position: relative;" *ngIf="trow.injectableFlag == 1" #injectable>
+                            <mouse-tips [title]="'注射药物'" [isFixed]='true' [posInfo]='posInfo' *ngIf="trow == touchedTrow && injectable.show"></mouse-tips>
+                            <img src="../../images/injectableFlag.svg" (mouseover)="showTips($event, injectable)" (mouseout)="injectable.show = false">
+                            <!--注射药物-->
+                        </div>
+                        <div style="display: inline-block;position: relative;" *ngIf="trow.highriskFlag == 1" #highriskFlag>
+                            <mouse-tips [title]="'高危药品'" [isFixed]='true' [posInfo]='posInfo' *ngIf="trow == touchedTrow && highriskFlag.show"></mouse-tips>
+                            <img src="../../images/dangerflag.svg" (mouseover)="showTips($event, highriskFlag)" (mouseout)="highriskFlag.show = false">
+                            <!--高危药品-->
+                        </div>
+                    </td>
+                    <td width="10%">{{trow.zoneName}}</td>
+                    <td width="10%">{{trow.deptName}}</td>
+                    <td width="10%">{{trow.recipeDocName}}</td>
+                    <td width="10%">{{trow.recipeTime | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                    <td width="10%">{{trow.recipeNo}}</td>
+                    <td width="10%">{{trow.patientId}}</td>
+                    <td width="10%">{{trow.name}}</td>
+                    <td width="10%">{{trow.sex}}</td>
+                    <td width="8%">{{trow.age}}</td>
+                    <td (click)="goReview(trow)">查看</td>
+                </tr>
+                <tr *ngIf="!tableinfo.dataList || tableinfo.dataList.length <= 0">
+                    <td colspan="100" style="padding: 10px 0;">没有找到相关数据</td>
+                </tr>
+            </template>
+        </my-table>
+    </div>
+</div>
+<drug-category-dialog #drugCategoryDialog [options]="drugCategoryDialogOptions" (onChooseDrugs)="chooseNewCategoryConfirm($event)"></drug-category-dialog>
+<!-- <zone-dept-wrap-component [options]="deptOptions" [relydom]="deptComp" (output)="fnDeptSelect($event)" [activeZone]="activeZone" [activeDept]="activeDept"></zone-dept-wrap-component> -->

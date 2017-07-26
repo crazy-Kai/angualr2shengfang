@@ -1,0 +1,17 @@
+<div class="form-group form-inline audit-plan-list">
+    <label class="f-i-label">{{label}}：</label>
+    <div class="audit-plan-pay-select" (click)="selectClick($event)">
+        <span class="audit-plan-pay-name" *ngFor="let resultType of payTypeResult">
+            {{resultType}}
+            <span class="audit-plan-X" (click)="deletePayType($event, resultType)">X</span>
+        </span>
+    </div>
+    <div class="popup-add-choice" *ngIf="isPopupShow" (click)="stopPropagation($event)">
+        <ul>
+            <li class="" *ngFor="let payTypeItem of payTypeList" (click)="choosePayType(payTypeItem)">
+                {{payTypeItem.name || payTypeItem.patientCondition}}
+                <span *ngIf="payTypeItem.checked" style="float: right;"><img src="../../../images/save-success.svg" alt="成功"/></span>
+            </li>
+        </ul>
+    </div>
+</div>

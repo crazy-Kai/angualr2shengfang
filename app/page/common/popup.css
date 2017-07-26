@@ -1,0 +1,134 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.5);
+}
+
+.popup-header {
+    padding: 0 10px;
+    height: 38px;
+    line-height: 38px;
+    color: #ffffff;
+    background: rgba(22, 155, 213, 1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.popup-close {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    background: url('app/images/close-1.svg') center center no-repeat;
+}
+
+.popup-close:hover {
+    background: url('app/images/close-1.svg') center center no-repeat;
+}
+
+.popup-header>div>img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.popup-body {
+    background: #ffffff;
+    padding: 20px 15px;
+    height: 350px;
+    overflow: auto;
+}
+
+.popup-header>div>img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.popup-body-nav {
+    height: 40px;
+    line-height: 40px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+
+.popup-body-nav a {
+    text-align: center;
+}
+
+.popup-body-date {
+    height: 48px;
+    line-height: 28px;
+    background: #ffffff;
+    padding: 10px 0;
+}
+
+.popup-diagnostic,
+.popup-process,
+.popup-admission,
+.popup-checklist,
+.popup-operation,
+.popup-vital,
+.popup-advice,
+.popup-allergy,
+.popup-describe {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.popup-process-text {
+    padding: 0 15px;
+}
+
+.popup-clecklist-font-size {
+    font-size: 12px;
+}
+
+.popup-checklist-table {
+    margin-bottom: 20px;
+    border: 1px solid #555555;
+}
+
+.popup-checklist-table-title {
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.popup-body-date-btn {
+    font-size: 12px;
+    height: 28px;
+    padding: 0 12px;
+}
+
+.popup-checklist-table-height>tr>td {
+    height: 70px;
+    vertical-align: middle !important;
+}
+
+
+/*覆盖bootstrap的样式*/
+
+.input-group-addon {
+    font-size: 12px !important;
+    padding: 0 4px;
+}
+
+.input-group[class*=col-] {
+    float: left;
+}
+
+.form-control,
+.input-group-addon {
+    background: #fff !important;
+    height: 28px;
+    line-height: 26px;
+}

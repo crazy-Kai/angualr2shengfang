@@ -1,0 +1,68 @@
+.audit-plan{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.audit-plan .f-i-label{
+    width: 120px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+header {
+    font-size: 15px;
+    padding: 12px 0 8px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-menu {
+    padding: 25px 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.audit-plan-menu>div.col-6 {
+    max-width: 550px;
+}
+
+.audit-plan-mandatory {
+    color: red;
+    margin-right: 5px;
+}
+
+.audit-plan-list {
+    position: relative;
+}
+
+.audit-plan-list>label {
+    height: 30px;
+    line-height: 30px;
+}
+
+.audit-plan-text {
+    max-width: 390px;
+    line-height: 30px;
+    color: #515253;
+}
+
+.audit-plan-footer-cancel {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #DFDFDF;
+    color: #515253;
+    background-color: #F1F1F1;
+    border-radius: 4px;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

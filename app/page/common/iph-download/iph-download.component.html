@@ -1,0 +1,41 @@
+<div class="popup-bg">
+	<div class="popup-box flex column dl-win">
+		<h3 class="popup-header"><a (click)="close()" class="popup-close">x</a>下载</h3>
+		<div style="margin: 15px 10px;">
+			<button class="btn btn-sm" (click)="refresh()">刷新</button>
+			<button class="btn btn-sm btn-danger" (click)="clear()">一键清空</button>
+		</div>
+		<div class="popup-body flex1 dl-win-content" style="overflow:auto;">
+			<table class="table table-bordered">
+				<thead>
+					<th>序号</th>
+					<th>文件名</th>
+					<th>导出时间</th>
+					<th>下载次数</th>
+					<th>状态</th>
+					<th>操作</th>
+				</thead>
+				<tbody>
+					<tr *ngFor="let file of downloadList; let i = index;">
+						<td>{{i+1}}</td>
+						<td>{{file.fileName}}</td>
+						<td>{{file.createdTime | date:"yyyy-MM-dd HH:mm:ss"}}</td>
+						<td>{{file.downloadTimes}}</td>
+						<td>{{file.statusStr}}</td>
+						<td style="padding: 5px;">
+							<button class="btn btn-sm btn-info" (click)="fnDownload(file)">下载</button>
+							<button class="btn btn-sm btn-danger" (click)="fnDelete(file, i)">删除</button>
+						</td>
+					</tr>
+					<tr *ngIf="!downloadList.length" style="text-align:center;">
+						<td colspan="100">没有查询到数据！</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="popup-footer">
+			<button type="button" class="btn btn-sm btn-grey" (click)="close()">关闭</button>
+		</div>
+	</div>
+</div>
+<prompt-component></prompt-component>

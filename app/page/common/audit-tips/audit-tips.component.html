@@ -1,0 +1,5 @@
+<div class="hint" [class.show]="options.show" *ngIf="options.show">
+    <img *ngIf="options.icon == 'success'" src="../../../images/save-success.svg"/>
+    <img *ngIf="options.icon == 'fail'" src="../../../images/save-fail.svg"/>
+    <span>{{options.string}}</span>
+</div>
